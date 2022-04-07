@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -7,16 +6,33 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../css/index_Frame.css">
+<script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	/* 애니메이션 효과 */
+	jQuery(function ($) {
+	    $("#home_Frame").css("display", "none");
+	    $("#home_Frame").fadeIn(2000);
+	    $("a.transition").click(function (event) {
+	        event.preventDefault();
+	        linkLocation = this.href;
+	        $("#home_Frame").fadeOut(1000, redirectPage);
+	    });
+	
+	    function redirectPage() {
+	        window.location = linkLocation;
+	    }
+	});
+</script>
 </head>
 <!-- 해당 페이지는 인덱스 페이지로  -->
 <body>
-	<div id="all">
+	<div id="frame">
 	
 		<!-- header : 로고 및 메뉴  -->
 		<div id="header">
 			<a href="index.jsp"><img alt="메인" src="../image/logo.png"></a>
 			<div id="menu">
-				<a href="#">HOME</a>&emsp;
+				<a href="index.jsp">HOME</a>&emsp;
 				<a href="#">Artists</a>&emsp;
 				<a href="#">Exhibitions</a>&emsp;
 				<a href="#">Art Fairs</a>&emsp;
@@ -24,7 +40,7 @@
 			</div>
 		</div>
 		
-		<!-- section : 전시회 예약 및   -->
+		<!-- section : 나중에 Controller에서 ref값으로 화면 받아올 예정 -->
 		<div id="section">
 			<c:if test="${ref==null}">
 				<jsp:include page="home.jsp"/>
@@ -34,7 +50,7 @@
 			</c:if>
 		</div>
 		
-		<!-- footer -->
+		<!-- footer : -->
 		<div id="footer">
 			<div id="f_image">
 				<span><a><img alt="main" src="../image/logo.png" width="150px;"></a></span>
