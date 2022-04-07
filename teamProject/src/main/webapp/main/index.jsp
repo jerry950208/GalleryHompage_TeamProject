@@ -7,22 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../css/index_Frame.css">
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-	/* 애니메이션 효과 */
-	jQuery(function ($) {
-	    $("#home_Frame").css("display", "none");
-	    $("#home_Frame").fadeIn(2000);
-	    $("a.transition").click(function (event) {
-	        event.preventDefault();
-	        linkLocation = this.href;
-	        $("#home_Frame").fadeOut(1000, redirectPage);
-	    });
-	
-	    function redirectPage() {
-	        window.location = linkLocation;
-	    }
-	});
-</script>
+<script type="text/javascript" src="../script/index_animation.js"></script>
 </head>
 <!-- 해당 페이지는 인덱스 페이지로  -->
 <body>

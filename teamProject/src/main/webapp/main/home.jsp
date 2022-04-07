@@ -7,20 +7,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../css/home_Frame.css">
-<script type="text/javascript">
-jQuery(function($) {
-    $("body").css("display", "none");
-    $("body").fadeIn(2000);
-    $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $("body").fadeOut(1000, redirectPage);
-    });
-    function redirectPage() {
-    	window.location = linkLocation;
-    }
-});
-</script>
 </head>
 <body>
 	<!-- 전체 프레임 -->
