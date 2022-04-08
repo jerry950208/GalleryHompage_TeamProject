@@ -6,9 +6,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../css/home_Frame.css">
+<link rel="stylesheet" type="text/css" href="../css/home_Frame.css?v=0.3">
+<script type="text/javascript">
+	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
+	$(document).ready(function () {
+	    $("#HOME").css("color", "lightgray").on("click", function (event) {
+	        event.preventDefault();
+	    });
+	});
+</script>
 </head>
 <body>
+
+
 	<!-- 전체 프레임 -->
 	<div id="home_Frame">
 		<div id="reservation_Sector">
@@ -142,7 +152,27 @@
 						<div id="past_Exhibition_Date">
 							2021.04.01 - 05.20
 						</div>
-					</div>					
+					</div>				
+				</div>
+				
+				<div>
+					<table>
+						<tr>
+							<td>
+								<div style="width: 390px; height: 1px; border: 1px solid #ccc; background-color: #ccc;"></div>
+							</td>
+							
+							<td>
+								<div style="font: 16px barlow-medium, barlow, sans-serif; color: #ccc;">
+									See&ensp;More
+								</div>
+							</td>
+							
+							<td>
+								<div style="width: 390px; height: 1px; border: 1px solid #ccc; background-color: #ccc;"></div>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>

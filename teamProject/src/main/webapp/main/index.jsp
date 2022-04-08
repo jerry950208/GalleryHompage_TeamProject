@@ -15,13 +15,13 @@
 	
 		<!-- header : 로고 및 메뉴  -->
 		<div id="header">
-			<a href="index.jsp"><img alt="메인" src="../image/logo.png"></a>
+			<a href="../main/index.jsp"><img alt="메인" src="../image/logo.png"></a>
 			<div id="menu">
-				<a href="index.jsp">HOME</a>&emsp;
-				<a href="#">Artists</a>&emsp;
-				<a href="#">Exhibitions</a>&emsp;
-				<a href="#">Art Fairs</a>&emsp;
-				<a href="#">Galleries</a>
+				<a href="../main/index.jsp" id="HOME">HOME</a>&emsp;
+				<a href="../artist/artist.do" id="Artists">Artists</a>&emsp;
+				<a href="#" id="Exhibitions">Exhibitions</a>&emsp;
+				<a href="../artFairs/artFairsMain.do" id="ArtFairs">Art Fairs</a>&emsp;
+				<a href="../galleries/galleries_About.do" id="Galleries">Galleries</a>
 			</div>
 		</div>
 		

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');		/* 폰트 사용을위한 임포트 */
 @charset "UTF-8";
 #frame {
 	padding: 0;
@@ -10,8 +10,7 @@
 }
 #menu {
 	text-align: right;
-	font-size: 16px;
-	font-family: barlow-medium, barlow, sans-serif;
+	font: 16px barlow-medium, barlow, sans-serif;
 }
 #menu a {
 	text-decoration: none;
@@ -19,12 +18,16 @@
 }
 #section {
 	border-bottom: 2px solid lightgray;
+	height: fit-content;
 }
 #menu a:hover {color: lightgray;}
 #menu a:active {color: lightgray;}
+
 #footer {
-	/*border-top: 2px solid lightgray;*/
 	height: 200px;
+}
+#header {
+		
 }
 #f_image {
 	vertical-align: top;

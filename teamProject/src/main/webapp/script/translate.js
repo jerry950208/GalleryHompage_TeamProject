@@ -1,4 +1,3 @@
-/* 애니메이션 효과 */
 jQuery(function ($) {
     $("#section").css("display", "none");
     $("#section").fadeIn(2000);

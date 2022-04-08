@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<!-- menu에 artist의 DTO 별칭 -->
+		<typeAlias type="artist.dto.ArtistDTO" alias="artistDTO"/>
+		<!-- menu에 galleries의 DTO 별칭 -->
+		<typeAlias type="galleries.bean.GalleriesDTO" alias="galleriesDTO"/>
+		
+		<typeAlias type="artFairs.bean.ArtFairsDTO" alias="artFairsDTO"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mybatis/artist-mapping.xml"/>
+		<mapper resource="mybatis/galleries-mapping.xml" />
+		<mapper resource="mybatis/artFairs-mapping.xml"/>
+	</mappers>
+</configuration>
