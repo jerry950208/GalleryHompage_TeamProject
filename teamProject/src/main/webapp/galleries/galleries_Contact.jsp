@@ -148,21 +148,21 @@ a {
 			
 			
 			<div>
-				<form action="#" id="table_Frame">
+				<form action="../galleries/contact_write.do" id="table_Frame" name="contact_Form">
 					<table id="contact_Table">
 						<tr>
 							<td colspan="2" id="table_label"><label>CONTACT</label></td>
 						</tr>
-							
+						
 						<tr>
-							<td id="table_input"><input type="text" id="name" placeholder="Name"></td>
-							<td><input type="email" id="email" placeholder="Email"></td>
+							<td id="table_input"><input type="text" id="name" name="contact_Name" placeholder="Name" required="required"></td>
+							<td><input type="email" id="email" name="contact_Email" placeholder="Email" required="required"></td>
 						</tr>
 						<tr>
-							<td colspan="2" id="table_textarea"><textarea rows="8em" cols="100em" placeholder="Message"></textarea></td>
+							<td colspan="2" id="table_textarea"><textarea rows="8em" cols="100em" name="contact_Message" placeholder="Message" required="required"></textarea></td>
 						</tr>
 						<tr>
-							<td colspan="2" id="table_submit"><input type="button" value="submit" id="submit_Btn"></td><!-- onclick 이벤트 추가 -->
+							<td colspan="2" id="table_submit"><input type="submit" value="submit" id="submit_Btn" ></td>
 					</table>
 				</form>
 			</div>

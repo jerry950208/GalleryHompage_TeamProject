@@ -58,7 +58,7 @@ a {
 	text-decoration: none;
 	color: black;
 }
-#content {
+#content pre {
 	font: 17px barlow-extralight, barlow, sans-serif;
 	color: #121212;
 	font-weight: lighter;
@@ -124,8 +124,6 @@ a {
 #submit_Btn:hover {
 	color: #ccc;
 }
-
-
 </style>
 </head>
 <body>
@@ -154,42 +152,35 @@ a {
 			<div id="galleries_Content_Title">About</div>
 			<div id="galleries_UnderLine"></div>
 			<div id="content">
-				Gallery BK, started in Hannam-dong, Seoul in 2011, has been showcasing introduce the work of
-				established artists and their idea to the public along with the activity of discovering talented and
-				promising young artists who have not paid attention yet.<br><br>
+				<div>
+					<pre>
+						${about_Content }
+					</pre>
+					<input type="button" value="글 수정" onclick="location.href='../galleries/galleries_About_WriteForm.do'">
+				</div>
 				
-				Since opening, Gallery BK has been working on to bridge between artists and collectors through
-				exhibitions and artist promotions that show diversity in order to build our own unique cultural
-				ground in the recent art market which various genres coexist. In addition, we provide art
-				consulting services to not only corporate also private collectors to provides a quality
-				environment according to their vision, purpose, and taste.<br><br>
-			
-				Hereafter, in order to enhance public consciousness for contemporary art amid rapid changes in
-				global art market, Gallery BK aim to provide an opportunity to collectors from various classes to
-				enjoy the works of emerging and prominent artists according to their own preferences.<br>
-				
-				<form action="#" id="table_Frame">
+				<form action="../galleries/contact_write.do" id="table_Frame" name="contact_Form">
 					<table id="contact_Table">
 						<tr>
 							<td colspan="2" id="table_label"><label>CONTACT</label></td>
 						</tr>
 						
 						<tr>
-							<td id="table_input"><input type="text" id="name" placeholder="Name"></td>
-							<td><input type="email" id="email" placeholder="Email"></td>
+							<td id="table_input"><input type="text" id="name" name="contact_Name" placeholder="Name" required="required"></td>
+							<td><input type="email" id="email" name="contact_Email" placeholder="Email" required="required"></td>
 						</tr>
 						<tr>
-							<td colspan="2" id="table_textarea"><textarea rows="8em" cols="100em" placeholder="Message"></textarea></td>
+							<td colspan="2" id="table_textarea">
+								<textarea rows="8em" cols="100em" name="contact_Message" placeholder="Message" required="required"></textarea>
+							</td>
 						</tr>
 						<tr>
-							<td colspan="2" id="table_submit"><input type="button" value="submit" id="submit_Btn"></td><!-- onclick 이벤트 추가 -->
+							<td colspan="2" id="table_submit">
+								<input type="submit" value="submit" id="submit_Btn" >
+							</td>
 					</table>
 				</form>
 			</div>
-		</div>
-		
-		<div>
-			
 		</div>
 	</div>
 </body>

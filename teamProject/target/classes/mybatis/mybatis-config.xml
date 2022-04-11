@@ -9,6 +9,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="artist.dto.ArtistDTO" alias="artistDTO"/>
 		<!-- menu에 galleries의 DTO 별칭 -->
 		<typeAlias type="galleries.bean.GalleriesDTO" alias="galleriesDTO"/>
+		<typeAlias type="galleries.bean.ContactDTO" alias="contactDTO"/>
 		
 		<typeAlias type="artFairs.bean.ArtFairsDTO" alias="artFairsDTO"/>
 	</typeAliases>
@@ -16,6 +17,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<mapper resource="mybatis/artist-mapping.xml"/>
 		<mapper resource="mybatis/galleries-mapping.xml" />
+			<mapper resource="mybatis/contact-mapping.xml" />
 		<mapper resource="mybatis/artFairs-mapping.xml"/>
 	</mappers>
 </configuration>

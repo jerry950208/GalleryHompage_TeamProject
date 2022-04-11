@@ -42,5 +42,5 @@ public class ArtFairsController {
 	    modelAndView.setViewName("../main/index.jsp");
 		return modelAndView;
 	}
-
+	
 }

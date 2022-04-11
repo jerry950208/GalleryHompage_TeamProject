@@ -11,7 +11,7 @@
 </head>
 <!-- 해당 페이지는 인덱스 페이지로  -->
 <body>
-	<div id="frame">
+	<div id="frame" style="height: auto;">
 	
 		<!-- header : 로고 및 메뉴  -->
 		<div id="header">
@@ -25,7 +25,6 @@
 			</div>
 		</div>
 		
-		<!-- section : 나중에 Controller에서 ref값으로 화면 받아올 예정 -->
 		<div id="section">
 			<c:if test="${ref==null}">
 				<jsp:include page="home.jsp"/>

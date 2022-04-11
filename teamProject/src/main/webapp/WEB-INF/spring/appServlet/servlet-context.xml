@@ -18,6 +18,7 @@
 	 <!-- 어노테이션 사용 설정 -->
 	<context:component-scan base-package="com.exam.teamProject" />
 	<context:component-scan base-package="galleries" />
+	<context:component-scan base-package="contact" />
 	<context:component-scan base-package="artist" />
 	<context:component-scan base-package="artFairs"/>
 	<!-- script 폴더 등록 -->
