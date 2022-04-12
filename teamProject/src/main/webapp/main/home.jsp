@@ -39,7 +39,7 @@
 					<p id="exhibition_Artist">이길래 개인전</p>
 					<p id="exhibition_Date">2022.03.10 - 04.07</p>
 					<p id="exhibition_Floor">BK itaewon B1-3F</p><br><br>
-					<input type="button" value="예약하기" id="reservation_Btn">
+					<input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='https://booking.naver.com/booking/12/bizes/659505'">
 				</div>
 			</c:forEach>
 			

@@ -22,4 +22,7 @@ public class ArtFairsDAO {
 		return sqlSession.selectOne("mybatis.artFairsMapper.getAtrFairsView", title);
 	}
 
+	public ArtFairsDTO getAtrFairsView_photo(String title) {
+		return sqlSession.selectOne("mybatis.artFairsMapper.getAtrFairsView_photo", title);
+	}
 }

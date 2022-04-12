@@ -34,13 +34,27 @@ public class ArtFairsController {
 		String title = request.getParameter("title");
 		System.out.println(title);
 		
-		ArtFairsDTO dto = artFairsService.getAtrFairsView(title);
-		
+		//페어정보 가져오기
+		ArtFairsDTO dto1 = artFairsService.getAtrFairsView(title);
+		//페어진행 추가사진 가져오기
+		ArtFairsDTO dto2 = artFairsService.getAtrFairsView_photo(title);
+	
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("dto", dto);
+		
+		modelAndView.addObject("dto1", dto1);
+		
+		// 추가사진 개수에 따라 cnt값 다르게 넘김
+		if(dto2.getImg_src3() == null && dto2.getImg_src2() == null) {
+			modelAndView.addObject("cnt", 1);
+		} else if (dto2.getImg_src3() == null && dto2.getImg_src2() != null){
+			modelAndView.addObject("cnt", 2);
+		} else {
+			modelAndView.addObject("cnt", 3);
+		}
+		modelAndView.addObject("dto2", dto2);
 		modelAndView.addObject("ref", "../artFairs/artFairsView.jsp");
 	    modelAndView.setViewName("../main/index.jsp");
 		return modelAndView;
 	}
-	
+
 }
