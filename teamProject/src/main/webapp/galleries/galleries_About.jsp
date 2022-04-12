@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/galleries_Frame.css">
 <title>Insert title here</title>
 <script type="text/javascript">
 $(function () {
@@ -20,114 +21,6 @@ $(function () {
     });
 });
 </script>
-
-<style type="text/css">
-#galleries_Frame {
-	width: 1000px;
-	height: 900px;
-	margin: auto;
-	margin-top: 10em;
-}
-#galleries_nav {
-	float: left; 
-	width: 15%;
-	font: 22px barlow-medium, barlow, sans-serif;
-	
-}
-#galleries_nav td {
-	padding: 10px;
-}
-#galleries_nav_About {
-	 padding: 10px;
-}
-#galleries_Content {
-	float: right; 
-	text-align: justify; 
-	width: 75%;
-}
-#galleries_Content_Title {
-	text-align: right;
-	font: 30px barlow-medium, barlow, sans-serif;
-	padding: 8px;
-}
-#galleries_UnderLine {
-	border-top: 5px solid black;
-	margin-bottom: 3em; 
-}
-#galleries_Content:after {
-	clear: both;
-}
-a {
-	text-decoration: none;
-	color: black;
-}
-#content pre {
-	font: 17px barlow-extralight, barlow, sans-serif;
-	color: #121212;
-	font-weight: lighter;
-	line-height: 130%;
-}
-#table_Frame {
-	margin-top: 5em;
-}
-#contact_Table {
-	 margin: auto;
-}
-#table_label{
-	text-align: center;
-	padding: 7px;
-}
-#contact_Table label {
-	font: 17px barlow-medium, barlow, sans-serif;
-}
-#contact_Table input[type="text"],
-#contact_Table input[type="email"] {
-	width: 98%;
-	border: 0;
-	border-bottom: 1px solid black;
-	font: 15px barlow-medium, barlow, sans-serif;
-}
-#contact_Table input[type="text"]:hover,
-#contact_Table input[type="email"]:hover {
-	border-bottom: 2px solid black;
-}
-#contact_Table input[type="text"]:focus,
-#contact_Table input[type="email"]:focus {
-	border-bottom: 2px solid red;
-	outline: none;
-}
-#table_input {
-	height: 2em;
-}
-#table_textarea {
-	padding-top: 10px;
-}
-#table_textarea > textarea {
-	border: 0;
-	font: 15px barlow-medium, barlow, sans-serif;
-	border-bottom: 1px solid black;
-}
-#table_textarea > textarea:hover {
-	border-bottom: 2px solid black;
-}
-#table_textarea > textarea:focus {
-	border-bottom: 2px solid red;
-	outline: none;
-}
-#table_submit {
-	 text-align: center;
-}
-#submit_Btn {
-	width: 180px;
-	height: 50px;
-	border: 0;
-	background-color: white;
-	font: 16px barlow-medium, barlow, sans-serif;
-}
-#submit_Btn:hover {
-	color: #ccc;
-}
-</style>
 </head>
 <body>
 	<div id="galleries_Frame">

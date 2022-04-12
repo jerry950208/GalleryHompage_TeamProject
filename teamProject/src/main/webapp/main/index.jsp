@@ -21,7 +21,8 @@
 				<a href="../artist/artist.do" id="Artists">Artists</a>&emsp;
 				<a href="#" id="Exhibitions">Exhibitions</a>&emsp;
 				<a href="../artFairs/artFairsMain.do" id="ArtFairs">Art Fairs</a>&emsp;
-				<a href="../galleries/galleries_About.do" id="Galleries">Galleries</a>
+				<a href="../galleries/galleries_About.do" id="Galleries">Galleries</a>&emsp;
+				<a href="#" id="Login">Login</a>
 			</div>
 		</div>
 		
@@ -46,8 +47,8 @@
 						<td>BK Hannam : 25, Daesagwan-ro, Yongsan-gu, Seoul, Korea</td>
 						<td>02 790 7079</td>
 						<td>
-							<a href="#"><img alt="페북" src="../image/f.png"></a>
-							<a href="#"><img alt="인스타" src="../image/insta.png"></a>
+							<a href="https://www.facebook.com/gallerybk"><img alt="페북" src="../image/f.png"></a>
+							<a href="https://www.instagram.com/accounts/login/?next=/gallerybk/"><img alt="인스타" src="../image/insta.png"></a>
 						</td>
 					</tr>
 					

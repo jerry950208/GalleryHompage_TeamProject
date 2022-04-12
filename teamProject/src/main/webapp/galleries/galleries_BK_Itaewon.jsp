@@ -4,216 +4,136 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/galleries_Frame.css">
 <title>Insert title here</title>
 <script type="text/javascript">
 $(function () {
     $(document).ready(function () {
+    	// 상단 menu에 Galleries를 클릭했을경우, 해당 글자 색 변경, 클릭 안되게 설정
         $("#Galleries").css("color", "lightgray").on("click", function (event) {
             event.preventDefault();
         });
+     	// nav쪽에 BK_Itaewon을 클릭시에 해당 글자 색 변경, 클릭 안되게 설정
         $("#galleries_nav_BK_Itaewon > a").css("color", "lightgray").on("click", function (event) {
             event.preventDefault();
         });
     });
 });
 </script>
-<style type="text/css">
-#galleries_Frame {
-	width: 1000px;
-	height: 1200px;
-	margin: auto;
-	margin-top: 10em;
-}
-#galleries_nav {
-	float: left; 
-	width: 15%;
-	font: 22px barlow-medium, barlow, sans-serif;
-	
-}
-#galleries_nav td {
-	padding: 10px;
-}
-#galleries_nav_About {
-	 padding: 10px;
-}
-#galleries_Content {
-	float: right; 
-	text-align: justify; 
-	width: 75%;
-}
-#galleries_Content_Title {
-	text-align: right;
-	font: 30px barlow-medium, barlow, sans-serif;
-	padding: 8px;
-}
-#galleries_UnderLine {
-	border-top: 5px solid black;
-	margin-bottom: 3em; 
-}
-#galleries_Content:after {
-	clear: both;
-}
-a {
-	text-decoration: none;
-	color: black;
-}
-#content {
-	font: 17px barlow-extralight, barlow, sans-serif;
-	color: #121212;
-	font-weight: lighter;
-	line-height: 130%;
-}
-#table_Frame {
-	margin-top: 5em;
-}
-#contact_Table {
-	 margin: auto;
-}
-#table_label{
-	text-align: center;
-	padding: 7px;
-}
-#contact_Table label {
-	font: 17px barlow-medium, barlow, sans-serif;
-}
-#contact_Table input[type="text"],
-#contact_Table input[type="email"] {
-	width: 98%;
-	border: 0;
-	border-bottom: 1px solid black;
-	font: 15px barlow-medium, barlow, sans-serif;
-}
-#contact_Table input[type="text"]:hover,
-#contact_Table input[type="email"]:hover {
-	border-bottom: 2px solid black;
-}
-#contact_Table input[type="text"]:focus,
-#contact_Table input[type="email"]:focus {
-	border-bottom: 2px solid red;
-	outline: none;
-}
-#table_input {
-	height: 2em;
-}
-#table_textarea {
-	padding-top: 10px;
-}
-#table_textarea > textarea {
-	border: 0;
-	font: 15px barlow-medium, barlow, sans-serif;
-	border-bottom: 1px solid black;
-}
-#table_textarea > textarea:hover {
-	border-bottom: 2px solid black;
-}
-#table_textarea > textarea:focus {
-	border-bottom: 2px solid red;
-	outline: none;
-}
-#table_submit {
-	 text-align: center;
-}
-#submit_Btn {
-	width: 180px;
-	height: 50px;
-	border: 0;
-	background-color: white;
-	font: 16px barlow-medium, barlow, sans-serif;
-}
-#submit_Btn:hover {
-	color: #ccc;
-}
-</style>
 </head>
 <body>
 	<div id="galleries_Frame">
+		<!-- nav -->
 		<div id="galleries_nav">
 			<table>
 				<tr>
-					<td id="galleries_nav_About"><a href="../galleries/galleries_About.do">About</a></td>
+					<td id="galleries_nav_About">
+						<a href="../galleries/galleries_About.do">About</a>
+					</td>
 				</tr>
 				<tr>
-					<td id="galleries_nav_BK_Hannam"><a href="../galleries/galleries_BK_Hannam.do">BK Hannam</a></td>
+					<td id="galleries_nav_BK_Hannam">
+						<a href="../galleries/galleries_BK_Hannam.do">BK Hannam</a>
+					</td>
 				</tr>
 				<tr>
-					<td id="galleries_nav_BK_Itaewon"><a href="../galleries/galleries_BK_Itaewon.do">BK Itaewon</a></td>
+					<td id="galleries_nav_BK_Itaewon">
+						<a href="../galleries/galleries_BK_Itaewon.do">BK Itaewon</a>
+					</td>
 				</tr>
 				<tr>
-					<td id="galleries_nav_Internship"><a href="../galleries/galleries_Internship.do">Internship</a></td>
+					<td id="galleries_nav_Internship">
+						<a href="../galleries/galleries_Internship.do">Internship</a>
+					</td>
 				</tr>
 				<tr>
-					<td id="galleries_nav_Contact"><a href="../galleries/galleries_Contact.do">Contact</a></td>
+					<td id="galleries_nav_Contact">
+						<a href="../galleries/galleries_Contact.do">Contact</a>
+					</td>
 				</tr>
 			</table>
 		</div>
 		
+		<!-- BK_Itaewon  Content -->
 		<div id="galleries_Content">
+			<!-- Content쪽 상단 Title -->
 			<div id="galleries_Content_Title">Gallery BK Hannam</div>
+			<!-- Content쪽 Title 하단 밑줄 -->
 			<div id="galleries_UnderLine"></div>
 			
-			<div style="display: inline-block;">
-				<img alt="Hannam" src="../image/bk_Itaewon.jpg" style="width: 450px; height: 332px;">
+			<!-- Content -->
+			<div>
+				<!-- BK_Iteawon의 이미지 삽입 -->
+				<img alt="BK_Itaewon" src="../image/bk_Itaewon.jpg" id="BK_img">
 				&emsp;&emsp;
-				<!-- 지도 퍼오기 -->
+				<!-- BK_Itaewon 지도 가져오기 -->
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.7694829864167!2d126.99909981564653!3d37.53693087980354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3b3cbd300e3%3A0xec6d1acbde0d6081!2z7ISc7Jq47Yq567OE7IucIOyaqeyCsOq1rCDsnbTtg5zsm5DroZw0Muq4uCA1Ng!5e0!3m2!1sko!2skr!4v1649426930111!5m2!1sko!2skr" 
-				width="250px" height="332px" style="border:0;" 
-				allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					width="250px" height="332px" style="border:0;" 
+					allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
 			</div>
 			
 			<div>
-				<table style="width: 750px;  margin-top: 4em;">
+				<table id="BK_Info">
 					<tr>
-						<td style="font: 18px barlow-medium, barlow, sans-serif;">OPENING HOURS</td>
-						<td style="font: 18px barlow-medium, barlow, sans-serif;">ADDRESS</td>
-						<td rowspan="3" style="vertical-align: top; font: 17px barlow-extralight, barlow, sans-serif; font-weight: 100;">
+						<td>OPENING HOURS</td>
+						<td>ADDRESS</td>
+						<td rowspan="3">
 							For general inquires,<br>
 							please email info@gallerybk.co.kr test
 						</td>
 					</tr>
 					
 					<tr>
-						<td width="250px" style="font: 17px barlow-extralight, barlow, sans-serif; font-weight: 100;">Tuesday to Sunday: 11am - 7pm <br>(Closed on Mondays)</td>
-						<td width="200px" style="font: 17px barlow-extralight, barlow, sans-serif; font-weight: 100;">56, Itaewon-ro 42-gil, <br>Yongsan-gu, Seoul, Korea</td>
+						<td>
+							Tuesday to Sunday: 11am - 7pm <br>(Closed on Mondays)
+						</td>
+						<td>
+							56, Itaewon-ro 42-gil, <br>Yongsan-gu, Seoul, Korea
+						</td>
 					</tr>
 					
 					<tr>
-						<td style="font: 17px barlow-extralight, barlow, sans-serif; font-weight: 100;">*Lunch Break: 1pm - 2pm</td>
+						<td>
+							*Lunch Break: 1pm - 2pm
+						</td>
 					</tr>
 				</table>
 				
+				<!-- Contact Form : 정보 입력시 contact_write를 통해 메일로 전송됨 -->
 				<form action="../galleries/contact_write.do" id="table_Frame" name="contact_Form">
 					<table id="contact_Table">
 						<tr>
-							<td colspan="2" id="table_label"><label>CONTACT</label></td>
+							<td colspan="2" id="table_label">
+								<label>CONTACT</label>
+							</td>
 						</tr>
 						
 						<tr>
 							<td id="table_input">
+								<!-- required : 해당 속성으로 입력검사를 해줄수 있음 -->
+								<!-- 이름 입력 -->
 								<input type="text" id="name" name="contact_Name" placeholder="Name" required="required">
 							</td>
 							<td>
+								<!-- 이메일 입력 -->
 								<input type="email" id="email" name="contact_Email" placeholder="Email" required="required">
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2" id="table_textarea">
+								<!-- 메시지 입력 -->
 								<textarea rows="8em" cols="100em" id="message" name="contact_Message" placeholder="Message" required="required"></textarea>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2" id="table_submit">
-								<input type="submit" value="submit" id="submit_Btn" onclick="sendEmail();">
+								<input type="submit" value="submit" id="submit_Btn">
 							</td>
 					</table>
 				</form>
 			</div>
 		</div>
-		
-		<div>
-			
-		</div>
 	</div>
-	
-
 </body>
 </html>
