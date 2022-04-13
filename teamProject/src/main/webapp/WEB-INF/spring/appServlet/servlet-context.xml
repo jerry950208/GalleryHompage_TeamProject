@@ -21,6 +21,8 @@
 	<context:component-scan base-package="contact" />
 	<context:component-scan base-package="artist" />
 	<context:component-scan base-package="artFairs"/>
+	<context:component-scan base-package="login"/>
+	
 	<!-- script 폴더 등록 -->
 	<resources location="/script/" mapping="/script/**"></resources>
 	

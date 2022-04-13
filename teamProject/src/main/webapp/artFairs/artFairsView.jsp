@@ -6,11 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/cssMy.css?vs=234">
 <script type="text/javascript">
-/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
+
 $(document).ready(function () {
+	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
     $("#ArtFairs").css("color", "lightgray").on("click", function (event) {
         event.preventDefault();
     });
@@ -45,6 +46,7 @@ $(document).ready(function () {
 		}
 		$('input[name=bar]').attr('value', pageNumber + "/" + img_count);
 	}
+	
 	function next() {
 		if (img_count > img_position) {
 			imgs.animate({
