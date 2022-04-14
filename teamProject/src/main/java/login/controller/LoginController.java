@@ -47,13 +47,9 @@ public class LoginController {
 			message = "비밀번호가 틀렸습니다";
 		} else {
 			message = "로그인 성공";
-			if(memid.equals("AdminGallery")) {
-				HttpSession session = request.getSession();
-				session.setAttribute("AdminId", memid);
-			} else {
-				HttpSession session = request.getSession();
-				session.setAttribute("memId", memid);
-			}
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("memid", memid);
 		} 
 		
 //		System.out.println("dtoPW = " + dto.getPw());
@@ -68,6 +64,7 @@ public class LoginController {
 	@RequestMapping(value="/login/logout.do")
 	public ModelAndView logout(HttpServletRequest request) {
 		HttpSession session = request.getSession();
+		System.out.println(session.getAttribute("memid"));
 		session.removeAttribute("memid");
 		session.removeAttribute("Adminid");
 		

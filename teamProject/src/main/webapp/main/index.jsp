@@ -9,6 +9,7 @@
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../script/index_animation.js"></script>
 <script type="text/javascript">
+	// 하단 로고를 연타해서 클릭할경우 로그인창 출력
 	$(function() {
 		
 		var click = 0;
@@ -19,10 +20,11 @@
 		
 		function login() {
 			click++;
-			if(click > 5) {
-				if(window.sessionStorage.getItem("memid") == "null"){		//https://heewon26.tistory.com/14
+			if(click >= 5) {
+				if(<%=session.getAttribute("memid") == null%>){
 					location.href="../login/logInForm.do";
-				} else {
+				} 
+				if(<%=session.getAttribute("memid") != null%>) {	// 세션값이 없을경우 로그아웃 창
 					location.href="../login/logout.do";
 				}
 			}
@@ -33,7 +35,7 @@
 <!-- 해당 페이지는 인덱스 페이지로  -->
 <body>
 	<div id="frame" style="height: auto;">
-	
+		
 		<!-- header : 로고 및 메뉴  -->
 		<div id="header">
 			<a href="../main/index.jsp"><img alt="메인" src="../image/logo.png"></a>
