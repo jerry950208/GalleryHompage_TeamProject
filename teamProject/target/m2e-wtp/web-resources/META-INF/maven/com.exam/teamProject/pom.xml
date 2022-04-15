@@ -16,15 +16,6 @@
 	</properties>
 	<dependencies>
 		
-		<!-- 이메일 전송을 위한 dependency -->
-		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
-		<!-- <dependency>
-		    <groupId>javax.mail</groupId>
-		    <artifactId>mail</artifactId>
-		    <version>1.4.7</version>
-		</dependency> -->
-
-		
 		
 		<!-- 크롤링을 위한 selenium dependency -->
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->

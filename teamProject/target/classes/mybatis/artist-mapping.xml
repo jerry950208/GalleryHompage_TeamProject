@@ -3,7 +3,27 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis.artistMapper">
-    <select id="getArtistAll" resultType="artistDTO">
-        select * from artistMainPage order by name asc
+    <select id="getArtistAll" resultType="artist.dto.ArtistDTO">
+        select * from artist order by kor_name asc
+    </select>
+
+    <select id="getArtist_info" parameterType="String" resultType="artist.dto.Artist_InfoDTO">
+        select * from artist_info where eng_name=#{eng_name}
+    </select>
+
+    <select id="getArtist_featured_works" parameterType="String" resultType="artist.dto.Artist_Featured_WorksDTO">
+        select * from artist_featured_works where eng_name=#{eng_name}
+    </select>
+
+    <select id="getArtist_exhibitions_titles" parameterType="String" resultType="artist.dto.Artist_ExhibitionsDTO">
+        select * from artist_exhibitions where eng_name=#{eng_name}
+    </select>
+
+    <select id="getArtist_exhibitions_info" parameterType="String" resultType="artist.dto.Artist_Exhibitions_InfoDTO">
+        select * from artist_exhibitions_info where title=#{exhibition_title}
+    </select>
+
+    <select id="getArtist_news" parameterType="String" resultType="artist.dto.Artist_NewsDTO">
+        select * from artist_exhibitions_news where exhibitions_title=#{exhibition_title}
     </select>
 </mapper>

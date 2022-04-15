@@ -5,8 +5,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 
 	<typeAliases>
-		<!-- menu에 artist의 DTO 별칭 -->
+		<!-- menu에 artist의 DTO 별칭
 		<typeAlias type="artist.dto.ArtistDTO" alias="artistDTO"/>
+		 -->
 		<!-- menu에 galleries의 DTO 별칭 -->
 		<typeAlias type="galleries.bean.GalleriesDTO" alias="galleriesDTO"/>
 		<typeAlias type="galleries.bean.ContactDTO" alias="contactDTO"/>
