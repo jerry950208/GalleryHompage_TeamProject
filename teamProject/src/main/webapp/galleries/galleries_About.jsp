@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,7 +73,9 @@ $(function () {
 						 About_Content내용 수정을 위해서 About_Write_Form으로 이동하기 위한 버튼
 						 나중에 login기능 추가될경우 admin에게만 버튼 보이게 설정 해야됨
 					-->
-					<input type="button" value="글 수정" onclick="location.href='../galleries/galleries_About_WriteForm.do'">
+					<c:if test="<%=session.getAttribute(\"memid\") != null%>">
+						<input type="button" value="글 수정" onclick="location.href='../galleries/galleries_About_WriteForm.do'">
+					</c:if>
 				</div>
 				
 				<!-- Contact Form : 정보 입력시 contact_write를 통해 메일로 전송됨 -->
