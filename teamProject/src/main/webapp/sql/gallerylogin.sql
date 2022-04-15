@@ -1,5 +1,5 @@
 create table gallerylogin (
-	memname varchar2(50),
+	memname varchar2(50) primary key,
     memid varchar2(50),
     pw varchar2(50),
 	gender varchar2(50),

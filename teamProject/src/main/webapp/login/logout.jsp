@@ -5,34 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-#button{
-	width: 100px;
-	height: 30px;
-	border-radius: 10px;
-	background-color: black;
-	color: white;
-	box-shadow: 3px 3px 3px rgba(0,0,0,0.8);
-	cursor: pointer;
-	border: none;
-}
-#button:active {
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-	position: relative;
-	top: 2px;
-	left: 2px;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="../css/login_button.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
 <script type="text/javascript">
-	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
-	$(document).ready(function() {
-		$("#ArtFairs").css("color", "lightgray").on("click", function(event) {
-			event.preventDefault();
-		});
-	});
-
 	// <body onload="함수명"> 와 동일함
-	window.onload = function(){
+	window.onload = function() {
 		var dialog = document.getElementById("logout_dialog");
 		dialog.showModal();
 	}
@@ -44,9 +21,11 @@
 </script>
 </head>
 <body>
-	<dialog id="logout_dialog">
-		<h1>로그아웃 완료</h1>
-		<button type="button" id="button" onclick="close_ok()">확인</button>
-	</dialog>
+	<div id="div">
+		<dialog id="logout_dialog">
+			로그아웃 완료<br><br>
+			<button type="button" id="button" onclick="close_ok()">확인</button>
+		</dialog>
+	</div>
 </body>
 </html>

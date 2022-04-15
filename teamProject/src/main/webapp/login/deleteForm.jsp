@@ -1,36 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-#button{
-	width: 100px;
-	height: 30px;
-	border-radius: 10px;
-	background-color: black;
-	color: white;
-	box-shadow: 3px 3px 3px rgba(0,0,0,0.8);
-	cursor: pointer;
-	border: none;
-}
-#button:active {
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-	position: relative;
-	top: 2px;
-	left: 2px;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="../css/login_button.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<script type="text/javascript" src="../script/loginScript.js"></script>
 <script type="text/javascript">
-	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
-	$(document).ready(function() {
-		$("#ArtFairs").css("color", "lightgray").on("click", function(event) {
-			event.preventDefault();
-		});
-	});
-	
 	window.onload = function(){
 		var dialog = document.getElementById("delete_dialog");
 		dialog.showModal();
@@ -38,7 +17,7 @@
 	function close_ok() {
 		var dialog = document.getElementById("delete_dialog");
 		dialog.close();
-		location.href="delete.do";
+		location.href="../login/delete.do?memid=${memid}";
 	}
 	function close_cancel() {
 		var dialog = document.getElementById("delete_dialog");
@@ -48,10 +27,19 @@
 </script>
 </head>
 <body>
-	<dialog id="delete_dialog">		
-		<p>회원 탈퇴하시겠습니까?</p>
-		<button type="button" id="button" onclick="close_ok()">탈퇴</button>
-		<button type="button" id="button" onclick="close_cancel()">취소</button>
-	</dialog>
+<div id="div">
+   <dialog id="delete_dialog">      
+      ${message }<br><br>
+      <input type="hidden" value="${memid }">
+      <c:if test="${message == '탈퇴하시겠습니까?'}">
+         <button type="button" id="button" onclick="close_ok()">탈퇴</button>
+         <button type="button" id="button" onclick="close_cancel()">취소</button>
+      </c:if>
+      
+      <c:if test="${message != '탈퇴하시겠습니까?'}">
+         <button type="button" id="button" onclick="history.back()">뒤로</button>
+      </c:if>
+   </dialog>
+</div>
 </body>
 </html>

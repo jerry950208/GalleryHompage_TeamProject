@@ -109,21 +109,8 @@ public class LoginController {
 		dto.setPhone3(phone3);
 		dto.setAddr(addr);
 		
-//		System.out.println("memname = " + memname);
-//		System.out.println("memid" + memid);
-//		System.out.println("pw" + pw);
-//		System.out.println("gender" + gender);
-//		System.out.println("email1" + email1);
-//		System.out.println("email2" + email2);
-//		System.out.println("phone1" + phone1);
-//		System.out.println("phone2" + phone2);
-//		System.out.println("phone3" + phone3);
-//		System.out.println("addr" + addr);
-		
 		int result = loginService.join(dto);
 
-//		System.out.println("result" + result);
-		
 		ModelAndView modelAndView = new ModelAndView();
 
 		modelAndView.addObject("result", result);
@@ -148,8 +135,26 @@ public class LoginController {
 	}
 		
 	@RequestMapping(value = "/login/deleteForm.do")
-	public ModelAndView deleteForm() {
+	public ModelAndView deleteForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		String memid = request.getParameter("memid");
+		String pw = request.getParameter("pw");
+		
+		LoginDTO dto = loginService.login(memid);
+		
+		String message = "";
+		
+		if(dto == null) {
+			message = "회원정보가 없습니다";
+		} else if(!dto.getPw().equals(pw)) {
+			message = "비밀번호가 틀렸습니다";
+		} else {
+			message = "탈퇴하시겠습니까?";
+		} 
+		
 		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("memid", memid);
+		modelAndView.addObject("message", message);
 		modelAndView.addObject("ref", "../login/deleteForm.jsp");
 		modelAndView.setViewName("../main/index.jsp");
 
@@ -158,14 +163,9 @@ public class LoginController {
 	
 	@RequestMapping(value = "/login/delete.do")
 	public ModelAndView delete(HttpServletRequest request) {
-		HttpSession session = request.getSession();
-		String memid = (String) session.getAttribute("memid");
+		String memid = request.getParameter("memid");
 
 		int result = loginService.delete(memid);
-
-		if (result > 0) {
-			session.removeAttribute("memid");
-		}
 
 		ModelAndView modelAndView = new ModelAndView();
 

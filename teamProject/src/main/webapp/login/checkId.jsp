@@ -6,32 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-#button{
-	width: 100px;
-	height: 30px;
-	border-radius: 10px;
-	background-color: black;
-	color: white;
-	box-shadow: 3px 3px 3px rgba(0,0,0,0.8);
-	cursor: pointer;
-	border: none;
-}
-#button:active {
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-	position: relative;
-	top: 2px;
-	left: 2px;
-}
-</style>
-<script type="text/javascript">
-	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
-	$(document).ready(function() {
-		$("#ArtFairs").css("color", "lightgray").on("click", function(event) {
-			event.preventDefault();
-		});
-	});
+<link rel="stylesheet" type="text/css" href="../css/login_button.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
 
+<script type="text/javascript">
 	function checkIdClose() {
 		// opener : 자바스크립트 내장 객체, 부모 브라우저를 관리하는 객체
 		opener.frm.memid.value = "${memid }";
@@ -50,16 +28,18 @@
 </script>
 </head>
 <body>
-<form action="checkId.do" method="post" name="frm">
-	<c:if test="${exist }">
-		${memid }는 사용중입니다.<br><br>
-		아이디 <input type="text" name="memid">
-		<button type="button" id="button" onclick="checkId()">중복체크</button>
-	</c:if>
-	<c:if test="${!(exist) }">
-		${memid }는 사용가능합니다.<br><br>
-		<button type="button" id="button" onclick="checkIdClose()">사용</button>
-	</c:if>	
-</form>
+<div id="div">
+	<form action="checkId.do" method="post" name="frm">
+		<c:if test="${exist }">
+			${memid }는 사용중입니다.<br><br>
+			아이디 <input type="text" name="memid" required="required">
+			<button type="button" id="button" onclick="checkId()">중복체크</button>
+		</c:if>
+		<c:if test="${!(exist) }">
+			${memid }는 사용가능합니다.<br><br>
+			<button type="button" id="button" onclick="checkIdClose()">사용</button>
+		</c:if>	
+	</form>
+</div>
 </body>
 </html>

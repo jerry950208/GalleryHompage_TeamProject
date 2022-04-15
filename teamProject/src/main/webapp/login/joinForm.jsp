@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
 <title>Title</title>
+<link rel="stylesheet" type="text/css" href="../css/login_button.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<script type="text/javascript" src="../script/loginScript.js"></script>
 <script type="text/javascript">
 	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
 	$(document).ready(function() {
@@ -21,111 +24,11 @@
 			document.frm.memid.focus();
 		} else {
 			// 브라우저창 열기
-			window.open("checkId.do?memid="+memid, "", "width=450 height=250 left=500 top=200")
+			window.open("checkId.do?memid="+memid, "", "width=450 height=130 left=1000 top=600")
+			cnt++;
 		}
 	}
-
-	// 회원가입 입력검사
-	function check(){
-			var frm = document.frm;
-
-	        if(!frm.memname.value){
-	            alert("이름을 입력하세요");
-	            frm.memname.focus();
-	            return false;
-	        } else if(!frm.memid.value){
-	            alert("아이디를 입력하세요.");
-	            frm.memid.focus();
-	            return false;
-	        } else if(!frm.pw.value){
-	            alert("비밀번호를 입력하세요.");
-	            frm.pw.focus();
-	            return false;
-	        } else if(!frm.repw.value){
-	            alert("비밀번호 재확인을 입력하세요.");
-	            frm.repw.focus();
-	            return false;
-	        } else if(frm.pw.value != frm.repw.value){
-	            alert("비밀번호를 재확인하세요");
-	            return false;
-	        } else {
-				frm.submit();
-			}        
-	}
 </script>
-<!-- 
-<script type="text/javascript" src="../script/joinScript.js?v=123"></script>
--->
-<style type="text/css">
-.div{
-	padding-top: 350px;
-	padding-bottom: 450px;
-	width: 100%;
-	height: 80%;
-	font-family: Arial,Helvetica,sans-serif;
-}
-.input{
-	width: 98%;
-	background-color:transparent;
-	border: none;
-}
-.input_id{
-	width: 78%;
-	background-color:transparent;
-	border: none;
-}
-.select1{
-	width: 50%;
-	background-color:transparent;
-}
-.select2{
-	width: 20%;
-	background-color:transparent;
-}
-select>option{
-	text-align: center;
-}
-.phone{
-	width: 30%;
-	background-color:transparent;
-	border: none;
-}
-.gender{
-	padding-right: 200px;
-}
-#table{
-	border: none;
-	width: 40%;
-	border-spacing: 40px;
-}
-.td{
-	border-bottom: 1px solid black;
-}
-.button{
-	text-align: center;
-}
-#button{
-	width: 100px;
-	height: 30px;
-	border-radius: 10px;
-	background-color: black;
-	color: white;
-	box-shadow: 3px 3px 3px rgba(0,0,0,0.8);
-	cursor: pointer;
-	border: none;
-}
-#button:active {
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-	position: relative;
-	top: 2px;
-	left: 2px;
-}
-.mail{
-	widht: 30%;
-	background-color:transparent;
-	border: none;
-}
-</style>
 </head>
 <body>
 <div class="div">
