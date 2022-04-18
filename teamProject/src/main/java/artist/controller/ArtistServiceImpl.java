@@ -12,9 +12,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ArtistServiceImpl implements ArtistService {
 
-//    @Autowired
-//    ArtistDAO artistRepository;
-
     private final ArtistDAO artistRepository;
 
     @Override
@@ -44,7 +41,7 @@ public class ArtistServiceImpl implements ArtistService {
     }
 
     @Override
-    public List<_Artist_NewsDTO> getArtist_news(String exhibition_title) {
+    public List<Artist_NewsDTO> getArtist_news(String exhibition_title) {
         return artistRepository.getArtist_news(exhibition_title);
     }
 }

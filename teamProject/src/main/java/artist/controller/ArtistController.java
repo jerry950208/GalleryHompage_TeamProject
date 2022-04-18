@@ -17,10 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ArtistController {
 
-//    @Autowired
-//    ArtistService artistService;
-
-    private final ArtistService artistService;
+	private final ArtistService artistService;
 
     @RequestMapping(value = "/artist/artist.do")
     public ModelAndView artistList(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -50,7 +47,7 @@ public class ArtistController {
             items.put(i, item);
         }
         json.put("items", items);
-        System.out.println("json = " + json);
+//        System.out.println("json = " + json);
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("json", json);
@@ -98,7 +95,7 @@ public class ArtistController {
             items.put(i, item);
         }
         json.put("items", items);
-        System.out.println("json = " + json);
+//        System.out.println("json = " + json);
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("json", json);
@@ -137,7 +134,7 @@ public class ArtistController {
             }
             json_arr.put(i, items);
             json.put("json_arr", json_arr);
-            System.out.println("json = " + json);
+//            System.out.println("json = " + json);
             modelAndView.addObject("json", json);
         }
         modelAndView.setViewName("artist_info_exhibitions_Json.jsp");
@@ -179,7 +176,7 @@ public class ArtistController {
                 }
                 json_arr.put(i, items);
                 json.put("json_arr", json_arr);
-                System.out.println("json = " + json);
+//                System.out.println("json = " + json);
                 modelAndView.addObject("json", json);
             } else {
                 continue;

@@ -32,7 +32,7 @@ public class ArtFairsController {
 	@RequestMapping(value="/artFairs/artFairsView.do")
 	public ModelAndView atrFairsView(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String title = request.getParameter("title");
-		System.out.println(title);
+//		System.out.println(title);
 		
 		//페어정보 가져오기
 		ArtFairsDTO dto1 = artFairsService.getAtrFairsView(title);
