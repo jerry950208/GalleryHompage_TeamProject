@@ -13,7 +13,7 @@ public interface ArtistService {
 
     public List<Artist_ExhibitionsDTO> getArtist_exhibitions_titles(String eng_name);
 
-    public List<Artist_Exhibitions_InfoDTO> getArtist_exhibitions_info(String exhibition_title);
+    public List<Artist_Exhibitions_InfoDTO> getArtist_exhibitions_info(String eng_name, String exhibition_title);
 
     public List<Artist_NewsDTO> getArtist_news(String exhibition_title);
 }

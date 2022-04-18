@@ -3,7 +3,7 @@
 <%--<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>--%>
 <html>
 <head>
-    <title>Title</title>
+    <title>${artist_info.eng_name} | GalleryBK</title>
     <link rel="stylesheet" type="text/css" href="../css/artist_info_Frame.css">
     <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
@@ -36,6 +36,10 @@
 
                             li.append(img);
                             $("#artist_featured_works_imgs").append(li);
+                        }
+
+                        if (json.items.length == 1) {
+                            $("#artist_featured_works_next").hide();
                         }
 
                         // artist featured works 버튼
@@ -272,6 +276,10 @@
                         let next_btn0 = $("#artist_exhibitions_next0");
                         let imgs0 = $("#artist_exhibitions_imgs0");
 
+                        if (img_count_first == 1) {
+                            next_btn0.hide();
+                        }
+
                         prev_btn0.click(function () {
                             artist_exhibitions_first_prev();
                         });
@@ -333,6 +341,10 @@
                             artist_exhibitions_second_next();
                         });
 
+                        if (img_count_second == 1) {
+                            next_btn1.hide();
+                        }
+
                         prev_btn1.css({
                             "opacity": "0",
                             "pointer-events": "none"
@@ -385,6 +397,10 @@
                         next_btn2.click(function () {
                             artist_exhibitions_third_next();
                         });
+
+                        if (img_count_third == 1) {
+                            next_btn2.hide();
+                        }
 
                         prev_btn2.css({
                             "opacity": "0",
@@ -464,109 +480,122 @@
                         let json_arr = json.json_arr;
 
                         for (let i = 0; i < json_arr.length; i++) {
-                            let div_news_section = $("<div>");
-                            div_news_section.css({
-                                "width": "800px"
-                            });
 
-                            if (i > 0) {
+                            if (json.json_arr[i] != null) {
+                                let div_news_section = $("<div>");
                                 div_news_section.css({
-                                    "margin-top": "100px"
-                                });
-                            }
-
-                            let div_news_exhibition_title = $("<div>");
-                            // i번째 전시회 제목
-                            let title = $("<div>").html("《" + json.json_arr[i][0].title + "》" + "<br>");
-                            title.css({
-                                "font-size": "21px",
-                                "font-family": "barlow-extralight, barlow, sans-serif"
-                            });
-                            // i번째 전시회 기간
-                            let term = $("<div>").html(json.json_arr[i][0].term);
-                            term.css({
-                                "font-size": "17px",
-                                "font-family": "barlow-extralight, barlow, sans-serif",
-                                "color": "gray",
-                                "margin-top": "5px"
-                            });
-                            div_news_exhibition_title.append(title).append(term);
-                            div_news_exhibition_title.css("float", "left");
-                            div_news_section.append(div_news_exhibition_title);
-
-                            // i번째 전시회 뉴스 갯수
-                            let length = json_arr[i].length;
-
-                            let div_news_info = $("<div>");
-                            div_news_info.css({
-                                "width": "800px",
-                                "display": "inline-block",
-                                "clear": "both",
-                            });
-
-                            for (let j = 0; j < length; j++) {
-                                let div_news_info_1 = $("<div>");
-                                div_news_info_1.css({
-                                    "width": "200",
-                                    "display": "inline-block",
-                                    "vertical-align": "top"
+                                    "width": "800px"
                                 });
 
-                                if (j > 0) {
-                                    div_news_info_1.css("margin-left", "60px");
-                                }
-
-                                if (j == 3) {
-                                    div_news_info_1.css("margin-left", "0");
-                                }
-
-                                let href = json.json_arr[i][j].news_href;
-                                let news_href = $("<a>").attr("href", href).attr("target", "_blank");
-
-                                let src = json.json_arr[i][j].news_img;
-                                let news_img = $("<img>").attr("src", src);
-                                news_img.css({
-                                    "width": "200px",
-                                    "height": "220px",
-                                    "margin-top": "55px"
-                                });
-
-                                news_img.hover(function () {
-                                    $(this).css({
-                                        "opacity": "0.5",
-                                        "transition-duration": "0.3s"
+                                if (i > 0) {
+                                    div_news_section.css({
+                                        "margin-top": "100px"
                                     });
-                                }, function () {
-                                    $(this).css("opacity", "1");
+                                }
+
+                                if (json.json_arr[i - 1] == null) {
+                                    div_news_section.css({
+                                        "margin-top": "0"
+                                    });
+                                }
+
+                                let div_news_exhibition_title = $("<div>");
+                                // i번째 전시회 제목
+                                let title = $("<div>").html("《" + json.json_arr[i][0].title + "》" + "<br>");
+                                title.css({
+                                    "font-size": "21px",
+                                    "font-family": "barlow-extralight, barlow, sans-serif"
+                                });
+                                // i번째 전시회 기간
+                                let term = $("<div>").html(json.json_arr[i][0].term);
+                                term.css({
+                                    "font-size": "17px",
+                                    "font-family": "barlow-extralight, barlow, sans-serif",
+                                    "color": "gray",
+                                    "margin-top": "5px"
+                                });
+                                div_news_exhibition_title.append(title).append(term);
+                                div_news_exhibition_title.css("float", "left");
+                                div_news_section.append(div_news_exhibition_title);
+
+                                // i번째 전시회 뉴스 갯수
+                                let length = json_arr[i].length;
+
+                                let div_news_info = $("<div>");
+                                div_news_info.css({
+                                    "width": "800px",
+                                    "display": "inline-block",
+                                    "clear": "both",
                                 });
 
-                                news_href.append(news_img);
+                                for (let j = 0; j < length; j++) {
+                                    let div_news_info_1 = $("<div>");
+                                    div_news_info_1.css({
+                                        "width": "200",
+                                        "display": "inline-block",
+                                        "vertical-align": "top"
+                                    });
 
-                                let news_date = $("<div>").html(json.json_arr[i][j].news_date);
-                                news_date.css({
-                                    "margin-top": "20px",
-                                    "font-size": "barlow-extralight, 18px",
-                                    "color": "rgb(84, 84, 84)"
-                                });
+                                    if (j > 0) {
+                                        div_news_info_1.css("margin-left", "60px");
+                                    }
 
-                                let news_title = $("<div>").html(json.json_arr[i][j].news_title);
-                                news_title.css({
-                                    "margin-top": "10px",
-                                    "color": "rgb(44, 45, 52)",
-                                    "font-size": "13px",
-                                    "font-weight": "bold",
-                                    "font-family": "barlow-medium,barlow,sans-serif"
-                                });
+                                    if (j % 3 == 0) {
+                                        div_news_info_1.css("margin-left", "0");
+                                    }
 
-                                div_news_info_1.append(news_href).append(news_date).append(news_title);
-                                div_news_info.append(div_news_info_1);
+                                    let href = json.json_arr[i][j].news_href;
+                                    let news_href = $("<a>").attr("href", href).attr("target", "_blank");
+
+                                    let src = json.json_arr[i][j].news_img;
+                                    let news_img = $("<img>").attr("src", src);
+                                    news_img.css({
+                                        "width": "200px",
+                                        "height": "220px",
+                                        "margin-top": "55px"
+                                    });
+
+                                    news_img.hover(function () {
+                                        $(this).css({
+                                            "opacity": "0.5",
+                                            "transition-duration": "0.3s"
+                                        });
+                                    }, function () {
+                                        $(this).css("opacity", "1");
+                                    });
+
+                                    news_href.append(news_img);
+
+                                    let news_date = $("<div>").html(json.json_arr[i][j].news_date);
+                                    news_date.css({
+                                        "margin-top": "20px",
+                                        "font-size": "barlow-extralight, 18px",
+                                        "color": "rgb(84, 84, 84)"
+                                    });
+
+                                    let news_title = $("<div>").html(json.json_arr[i][j].news_title);
+                                    news_title.css({
+                                        "margin-top": "10px",
+                                        "color": "rgb(44, 45, 52)",
+                                        "font-size": "13px",
+                                        "font-weight": "bold",
+                                        "font-family": "barlow-medium,barlow,sans-serif"
+                                    });
+
+                                    div_news_info_1.append(news_href).append(news_date).append(news_title);
+                                    div_news_info.append(div_news_info_1);
+                                }
+                                div_news_section.append(div_news_info);
+                                $("#artist_news").append(div_news_section);
                             }
-                            div_news_section.append(div_news_info);
-                            $("#artist_news").append(div_news_section);
                         }
                     },
                     error: function (xhr, textStatus, errorThrown) {
-                        alert("[ERROR] " + xhr, status);
+                        // 뉴스 정보 없으면 숨기기
+                        $("#artist_news_section").hide();
+                        $("#news_btn1").css("pointer-events", "none");
+                        $("#news_btn2").css("pointer-events", "none");
+                        $("#news_btn3").css("pointer-events", "none");
                     }
                 });
 
@@ -605,7 +634,7 @@
             <div id="artist_featured_works_category">
                 <input type="button" value="Featured Works" class="category_btn" style="color: darkgray"> <br>
                 <input type="button" value="Exhibitions" class="category_btn"> <br>
-                <input type="button" value="News" class="category_btn"> <br>
+                <input type="button" value="News" class="category_btn" id="news_btn1"> <br>
                 <input type="button" value="CV" class="category_btn">
             </div>
         </div>
@@ -624,7 +653,7 @@
         <div id="artist_exhibitions_category">
             <input type="button" value="Featured Works" class="category_btn"> <br>
             <input type="button" value="Exhibitions" class="category_btn" style="color: darkgray"> <br>
-            <input type="button" value="News" class="category_btn"> <br>
+            <input type="button" value="News" class="category_btn" id="news_btn2"> <br>
             <input type="button" value="CV" class="category_btn">
         </div>
         <div id="artist_exhibitions">
@@ -649,7 +678,7 @@
         <div id="artist_cv_category">
             <input type="button" value="Featured Works" class="category_btn"> <br>
             <input type="button" value="Exhibitions" class="category_btn"> <br>
-            <input type="button" value="News" class="category_btn"> <br>
+            <input type="button" value="News" class="category_btn" id="news_btn3"> <br>
             <input type="button" value="CV" class="category_btn" style="color: darkgray">
         </div>
 

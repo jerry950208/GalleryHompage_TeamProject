@@ -5,20 +5,32 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 
 	<typeAliases>
-		<!-- menu에 artist의 DTO 별칭
-		<typeAlias type="artist.dto.ArtistDTO" alias="artistDTO"/>
-		 -->
+		 
+		 <!-- 메인화면 DTO -->
+		<typeAlias type="exhibition.bean.ExDTO" alias="dto"/>
+		
+		<!-- 개인전 정보 -->
+		<typeAlias type="exhibition.bean.SoloDTO" alias="s_dto"/>
+		
+		<!-- 그룹전시 정보 -->
+		<typeAlias type="exhibition.bean.GroupInfoDTO" alias="g_info_dto"/>
+		<!-- 그룹전시 이미지 -->
+		<typeAlias type="exhibition.bean.GroupImgDTO" alias="g_img_dto"/>
+		 
 		<!-- menu에 galleries의 DTO 별칭 -->
 		<typeAlias type="galleries.bean.GalleriesDTO" alias="galleriesDTO"/>
 		<typeAlias type="galleries.bean.ContactDTO" alias="contactDTO"/>
 		
+		<!-- menu에 artFairs의 DTO 별칭 -->
 		<typeAlias type="artFairs.bean.ArtFairsDTO" alias="artFairsDTO"/>
 		
+		<!-- login의 DTO 별칭 -->
 		<typeAlias type="login.bean.LoginDTO" alias="loginDTO"/>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="mybatis/artist-mapping.xml"/>
+		<mapper resource="mybatis/exhibition-mapping.xml" />
 		<mapper resource="mybatis/galleries-mapping.xml" />
 			<mapper resource="mybatis/contact-mapping.xml" />
 		<mapper resource="mybatis/artFairs-mapping.xml"/>

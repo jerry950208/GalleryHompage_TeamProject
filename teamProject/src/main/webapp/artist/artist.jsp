@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Artist | GalleryBK</title>
     <link rel="stylesheet" type="text/css" href="../css/artist_Frame.css"/>
     <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">

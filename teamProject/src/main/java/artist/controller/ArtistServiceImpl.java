@@ -2,16 +2,20 @@ package artist.controller;
 
 import artist.dao.ArtistDAO;
 import artist.dto.*;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class ArtistServiceImpl implements ArtistService {
 
-    @Autowired
-    ArtistDAO artistRepository;
+//    @Autowired
+//    ArtistDAO artistRepository;
+
+    private final ArtistDAO artistRepository;
 
     @Override
     public List<ArtistDTO> getArtistAll() {
@@ -35,12 +39,12 @@ public class ArtistServiceImpl implements ArtistService {
 
 
     @Override
-    public List<Artist_Exhibitions_InfoDTO> getArtist_exhibitions_info(String exhibition_title) {
-        return artistRepository.getArtist_exhibitions_info(exhibition_title);
+    public List<Artist_Exhibitions_InfoDTO> getArtist_exhibitions_info(String eng_name, String exhibition_title) {
+        return artistRepository.getArtist_exhibitions_info(eng_name, exhibition_title);
     }
 
     @Override
-    public List<Artist_NewsDTO> getArtist_news(String exhibition_title) {
+    public List<_Artist_NewsDTO> getArtist_news(String exhibition_title) {
         return artistRepository.getArtist_news(exhibition_title);
     }
 }

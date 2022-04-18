@@ -42,7 +42,7 @@
 			<div id="menu">
 				<a href="../main/index.jsp" id="HOME">HOME</a>&emsp;
 				<a href="../artist/artist.do" id="Artists">Artists</a>&emsp;
-				<a href="#" id="Exhibitions">Exhibitions</a>&emsp;
+				<a href="../exhibition/exhibition.do" id="Exhibitions">Exhibitions</a>&emsp;
 				<a href="../artFairs/artFairsMain.do" id="ArtFairs">Art Fairs</a>&emsp;
 				<a href="../galleries/galleries_About.do" id="Galleries">Galleries</a>&emsp;
 			</div>

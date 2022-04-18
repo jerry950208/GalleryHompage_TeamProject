@@ -3,7 +3,6 @@ package selenium.dto;
 public class DTO {
 	private String eng_name;
 	private String info;
-	
 	public String getEng_name() {
 		return eng_name;
 	}

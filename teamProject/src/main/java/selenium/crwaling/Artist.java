@@ -22,7 +22,7 @@ public class Artist {
         System.out.println(driver.getPageSource());
 
         WebElement show_more = driver.findElement(By.className("_1gbg4"));
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             show_more.click();
         }
 
@@ -43,11 +43,12 @@ public class Artist {
             System.out.println("kor_name: " + kor_name);
             System.out.println("head_img: " + head_img);
 
-            DTO dto = new DTO();
-            dto.setEng_name(eng_name);
-            dto.setInfo(head_img);
-            
-            DAO dao = new DAO();
+//            DTO dto = new DTO();
+//            dto.setEng_name(eng_name);
+//            dto.setKor_name(kor_name);
+//            dto.setHead_img(head_img);
+//            
+//            DAO dao = new DAO();
 //            int result = dao.insert(dto);
 //            System.out.println(result);
         }

@@ -22,22 +22,15 @@
 </head>
 <body>
 <div id="div">
-	<dialog id="login_dialog">		
-		${message }<br><br>
-		<c:if test="${message == '로그인 성공' }">
-			<button type="button" id="button" onclick="close_ok()">메인으로</button>
-		</c:if>
-		
-		<c:if test="${message == '회원정보가 없습니다' } ">
-			<p>test1</p>
-			<button type="button" id="button" onclick="history.back()">뒤로</button>
-		</c:if>
-		
-		<c:if test="${message == '비밀번호가 틀렸습니다' } ">
-			<p>test2</p>
-			<button type="button" id="button" onclick="history.back()">뒤로</button>
-		</c:if>
-	</dialog>
+   <dialog id="login_dialog">      
+      ${message }<br><br>
+      <c:if test="${message == '로그인 성공' }">
+         <button type="button" id="button" onclick="close_ok()">메인으로</button>
+      </c:if>
+      <c:if test="${message != '로그인 성공' }">
+         <button type="button" id="button" onclick="close_ok()">메인으로</button>
+      </c:if>
+   </dialog>
 </div>
 </body>
 </html>
