@@ -9,12 +9,12 @@
 <link rel="stylesheet" type="text/css" href="../css/artFairs.css">
 <link rel="stylesheet" type="text/css" href="../css/login_button.css">
 <script type="text/javascript">
-/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
-$(document).ready(function () {
-    $("#ArtFairs").css("color", "lightgray").on("click", function (event) {
-        event.preventDefault();
-    });
-});
+	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
+	$(document).ready(function () {
+	    $("#ArtFairs").css("color", "lightgray").on("click", function (event) {
+	        event.preventDefault();
+	    });
+	});
 </script>
 </head>
 <body>
@@ -24,10 +24,16 @@ $(document).ready(function () {
 				<div class="af">
 					<a href="artFairsView.do?title=${dto.title}"> <img
 						id="mainimg_src" src="${dto.mainimg_src}">
-					</a> <br> <span class="D">${dto.afdate}</span> <br> 
-					<span class="T">${dto.title}</span>
+					</a> <br> <span class="D">${dto.afdate}</span> <br> <span
+						class="T">${dto.title}</span>
 				</div>
 			</c:forEach>
+			
+			<c:if test="${memid != null}">
+				<div align="center">
+					<button type="button" id="button" onclick="location.href='../artFairs/artFairsWriteForm.do'">글 등록</button>
+				</div>
+			</c:if>
 		</div>
 	</div>
 </body>

@@ -8,4 +8,6 @@ public interface ArtFairsService {
 	public List<ArtFairsDTO> getAtrFairsMain();
 	public ArtFairsDTO getAtrFairsView(String title);
 	public ArtFairsDTO getAtrFairsView_photo(String title);
+	public int insertArtFairs(ArtFairsDTO dto);
+	public int updateArtFairs(ArtFairsDTO dto, ArtFairsDTO dto_ori);
 }

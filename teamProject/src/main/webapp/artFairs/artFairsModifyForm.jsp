@@ -15,12 +15,6 @@
 		});
 	});
 </script>
-<style type="text/css">
-#textA {
-	width: 98%;
-	border: none;
-}
-</style>
 </head>
 <body>
 	<div class="div">
@@ -30,71 +24,61 @@
 				<tr>
 					<td class="td" width="20%">Fair Title</td>
 					<td class="td">
-						<input class="input" type="text" name="title" 
-								value="${dto.title }" required="required">
+						<input class="input" type="text" name="title" value="${dto.title }" required="required">
 					</td>
 				</tr>
 				<tr>
 					<td class="td">Fair Date</td>
 					<td class="td">
-						<input class="input" type="text" name="afdate" 
-								value="${dto.afdate }" required="required">
+						<input class="input" type="text" name="afdate" value="${dto.afdate }" required="required">
 					</td>
 				</tr>
 				<tr>
 					<td class="td">Fair Detail Date</td>
 					<td class="td">
-						<input class="input" type="text" name="info_date" 
-								value="${dto.info_date }" required="required">
+						<input class="input" type="text" name="info_date" value="${dto.info_date }" required="required">
 					</td>
 				</tr>
 				<tr>
 					<td class="td">Fair Info</td>
 					<td class="td">
-						<input class="input" type="text" name="info" 
-								value="${dto.info }" required="required">
+						<input class="input" type="text" name="info" value="${dto.info }" required="required">
 					</td>
 				</tr>
 				<tr>
 					<td class="td">Fair Place</td>
 					<td class="td">
-						<input class="input" type="text" name="place" 
-								value="${dto.place }" required="required">
+						<input class="input" type="text" name="place" value="${dto.place }" required="required">
 					</td>
 				</tr>
 				<tr>
 					<td class="td">Fair BoothNumber</td>
 					<td class="td">
-						<input class="input" type="text" name="place_detail" 
-								value="${dto.place_detail }" required="required">
+						<input class="input" type="text" name="place_detail" value="${dto.place_detail }" required="required">
 					</td>
 				</tr>
 				<tr>
 					<td class="td">Gallery</td>
 					<td class="td">
-						<input class="input" type="text" name="artists" value="GALLERY BK" 
-								readonly />
+						<input class="input" type="text" name="artists" value="GALLERY BK" readonly />
 					</td>
 				</tr>
 				<tr>
 					<td class="td">Artists</td>
 					<td class="td">
-						<pre><textarea id="textA" name="artist_name" rows="14" 
-								required="required">${dto.artist_name }</textarea></pre>
+						<pre><textarea id="textA" name="artist_name" rows="14" required="required">${dto.artist_name }</textarea></pre>
 					</td>
 				</tr>
 				<tr>
 					<td class="td">Fairs Logo</td>
 					<td class="td">
-						<input class="input" type="file" name="mainimg_src" 
-								value="${dto.mainimg_src }" required="required">
+						<input class="input" type="file" name="mainimg_src" value="${dto.mainimg_src }" required="required">
 					</td>
 				</tr>
 				<tr>
 					<td class="td">images</td>
 					<td class="td">
-						<input class="input" type="file" name="detailimg_src" 
-								value="${dto.detailimg_src }" required="required">
+						<input class="input" type="file" name="detailimg_src" value="${dto.detailimg_src }" required="required">
 					</td>
 				</tr>
 				<tr>

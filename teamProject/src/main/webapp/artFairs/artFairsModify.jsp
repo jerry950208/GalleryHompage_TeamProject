@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../css/artFairs.css">
 <link rel="stylesheet" type="text/css" href="../css/login_button.css">
-<script type="text/javascript">	
+<script type="text/javascript">
 	window.onload = function(){
 		var dialog = document.getElementById("modify_dialog");
 		dialog.showModal();

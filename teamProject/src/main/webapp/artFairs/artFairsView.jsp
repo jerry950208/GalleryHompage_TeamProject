@@ -208,7 +208,13 @@ $(document).ready(function () {
 			</div>
 		</div>
 
-		<div id="view_footer">&nbsp;</div>
+		<div id="view_footer">
+			<c:if test="${memid != null}">
+				<button type="button" id="button" onclick="location.href='artFairsModifyForm.do?title=${dto.title}'">
+					글 수정
+				</button>
+			</c:if>
+		</div>
 	</div>
 </body>
 </html>

@@ -4,16 +4,30 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis.artFairsMapper">
 
-	<select id="getAtrFairsMain" resultType="artFairsDTO"> 
+	<select id="getAtrFairsView" parameterType="String" resultType="artFairsDTO">
+		select * from artFairsMain where title = #{title} 
+	</select>
+	
+	<select id="getAtrFairsMain" resultType="artFairsDTO">
 		select * from artFairsMain order by afdate desc 
 	</select>
 	
-	<select id="getAtrFairsView" parameterType="String" resultType="artFairsDTO"> 
-		select * from artFairsMain where title = #{title}
-	</select>
-
 	<select id="getAtrFairsView_photo" parameterType="String" resultType="artFairsDTO"> 
 		select * from artFairsMain where title = #{title} 
 	</select>
+	
+	<insert id="insertArtFairs" parameterType="artFairsDTO">
+		insert into artFairsMain values (#{mainimg_src}, #{afdate}, #{title}, 
+		#{info_date}, #{info}, #{detailimg_src}, #{place}, #{place_detail}, #{artists},
+		#{artist_name}, #{img_src1}, #{img_src2}, #{img_src3})
+	</insert>
+
+	<update id="updateArtFairs" parameterType="java.util.Map">
+		update artFairsMain set mainimg_src=#{dto.mainimg_src}, afdate=#{dto.afdate}, title=#{dto.title}
+		info_date=#{dto.info_date}, info=#{dto.info}, detailimg_src=#{dto.detailimg_src}, place=#{dto.place}, 
+		place_detail=#{dto.place_detail}, artists=#{dto.artists}, artist_name=#{dto.artist_name}, 
+		img_src1=#{dto.img_src1}, img_src2=#{dto.img_src2}, img_src3=#{dto.img_src3} 
+		where title = #{dto_ori.ori_title} 
+	</update>
 
 </mapper>
