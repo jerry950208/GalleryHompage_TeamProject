@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../css/index_Frame.css">
+<link rel="stylesheet" type="text/css" href="../css/index_Frame.css?v=0.1">
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../script/index_animation.js"></script>
 
 <script type="text/javascript">
 
-	// 하단 top으로 가는 버튼
+	// 우측 하단 top으로 가는 버튼
 	$(function() {
 	    $("#moveTop").click(function() {
 	        $('html, body').animate({
@@ -20,7 +20,6 @@
 	        return false;
 	    });
 	});
-
 	
 	// 하단 로고를 연타해서 클릭할경우 로그인창 출력
 	$(function() {
@@ -100,7 +99,7 @@
 		</div>
 		<!-- 클릭시 최상단으로 올라가는 버튼 -->
 		 <a href="#" id="moveTop">
-		 	<img alt="top button" src="../image/topBtn.png" id="MOVE_TOP_BTN" width="30px" height="30px">
+		 	<img alt="top button" src="../image/topBtn.png" id="MOVE_TOP_BTN">
 		 </a>
 		
 	</div>

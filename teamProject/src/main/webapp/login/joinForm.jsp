@@ -43,7 +43,7 @@
 	        <tr>
 	            <td class="td">ID</td>
 	            <td class="td">
-	            	<input type="text" class="input_id" name="memid" id="memid" placeholder="* 필수 입력" style="width: 76%;">
+	            	<input type="text" class="input_id" name="memid" id="memid" placeholder="* 필수 입력" style="width: 76%;" required="required">
 	            	<button type="button" id="button" onclick="checkId()" style="margin-bottom: 10px;">중복체크</button>
 	            </td>
 	        </tr>

@@ -1,15 +1,31 @@
 package login.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import login.bean.LoginDTO;
 import login.dao.LoginDAO;
+import lombok.RequiredArgsConstructor;
+
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package login.controller
+ * 
+ * @file LoginServiceImpl.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description 로그인, 회원가입, 회원삭제를 위한 LoginServiceImpl Class
+ * 
+ */
 
 @Service
+@RequiredArgsConstructor
 public class LoginServiceImpl implements LoginService{
-	@Autowired
-	LoginDAO dao;
+
+	private final LoginDAO dao;
 
 	@Override
 	public LoginDTO login(String id) {

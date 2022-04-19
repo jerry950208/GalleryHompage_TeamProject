@@ -11,20 +11,6 @@
 		}
 	}
 
-	// 로그인 화면에서 입력 검사
-	function checkLogin(){
-		var frm = document.loginForm;
-		if(!frm.memid.value){
-			alert("아이디를 입력하세요");
-			frm.id.focus();
-		} else if(!frm.pw.value){
-			alert("비밀번호를 입력하세요");
-			frm.pw.focus();
-		} else {
-			frm.submit();
-		}	
-	}
-
 	// 회원가입 입력검사
 	function check(){
 		var frm = document.frm;

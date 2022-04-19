@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../css/login_button.css">
-<link rel="stylesheet" type="text/css" href="../css/login.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css?v=0.1">
 
 <script type="text/javascript">
 	function checkIdClose() {

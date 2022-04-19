@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');		/* 폰트 사용을위한 임포트 */
 @charset "UTF-8";
+
 #frame {
 	padding: 0;
 	padding-top: 50px;
@@ -47,6 +48,8 @@ div > table {
 	width: 700px;
 }
 #MOVE_TOP_BTN {
+	width: 30px;
+	height: 30px;
     position: fixed;
     right: 22%;
     bottom: 50px;
