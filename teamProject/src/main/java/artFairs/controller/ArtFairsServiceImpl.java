@@ -7,13 +7,28 @@ import org.springframework.stereotype.Service;
 
 import artFairs.bean.ArtFairsDTO;
 import artFairs.dao.ArtFairsDAO;
+import lombok.RequiredArgsConstructor;
 
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.controller
+ * 
+ * @file ArtFairsServiceImpl.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description ArtFairs의 글 쓰기, 글 수정, view를 위한 ArtFairServiceImpl Class, use lombok
+ * 
+ */
 
 @Service
+@RequiredArgsConstructor
 public class ArtFairsServiceImpl implements ArtFairsService{
 	
-	@Autowired
-	ArtFairsDAO dao;
+	private final ArtFairsDAO dao;
 
 	//페어목록가져오기
 	@Override

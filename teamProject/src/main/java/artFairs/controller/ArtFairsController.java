@@ -17,13 +17,30 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import artFairs.bean.ArtFairsDTO;
+import lombok.RequiredArgsConstructor;
+
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.controller
+ * 
+ * @file ArtFairsController.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description ArtFairsController, use lombok
+ * 
+ */
 
 @Controller
+@RequiredArgsConstructor
 public class ArtFairsController {
-	@Autowired
-	ArtFairsService artFairsService;
 
-	@RequestMapping(value="/artFairs/artFairsMain.do")
+	private final ArtFairsService artFairsService;
+
+	@RequestMapping("/artFairs/artFairsMain.do")
 	public ModelAndView atrFairsMain(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		List<ArtFairsDTO> list = artFairsService.getAtrFairsMain();
@@ -35,10 +52,9 @@ public class ArtFairsController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value="/artFairs/artFairsView.do")
+	@RequestMapping("/artFairs/artFairsView.do")
 	public ModelAndView atrFairsView(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String title = request.getParameter("title");
-//		System.out.println(title);
 		
 		//페어정보 가져오기
 		ArtFairsDTO dto1 = artFairsService.getAtrFairsView(title);
@@ -63,7 +79,7 @@ public class ArtFairsController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value="/artFairs/artFairsWriteForm.do")
+	@RequestMapping("/artFairs/artFairsWriteForm.do")
 	public ModelAndView artFairsWriteForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		ModelAndView modelAndView = new ModelAndView();
@@ -73,7 +89,7 @@ public class ArtFairsController {
 		return modelAndView;
 	}
 
-	@RequestMapping(value="/artFairs/artFairsWrite.do")
+	@RequestMapping("/artFairs/artFairsWrite.do")
 	public ModelAndView artFairsWrite(HttpServletRequest request, MultipartFile[] files){
 		
 		String filePath = request.getSession().getServletContext().getRealPath("/storage");
@@ -119,7 +135,7 @@ public class ArtFairsController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value="/artFairs/artFairsModifyForm.do")
+	@RequestMapping("/artFairs/artFairsModifyForm.do")
 	public ModelAndView artFairsModifyForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String title = request.getParameter("title");
 		
@@ -132,7 +148,7 @@ public class ArtFairsController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value="/artFairs/artFairsModify.do")
+	@RequestMapping("/artFairs/artFairsModify.do")
 	public ModelAndView artFairsModify(HttpServletRequest request, MultipartFile[] files){
 		String filePath = request.getSession().getServletContext().getRealPath("/storage");
 		String filesName[] = null;

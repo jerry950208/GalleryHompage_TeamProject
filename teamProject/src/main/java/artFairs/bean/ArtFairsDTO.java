@@ -2,6 +2,21 @@ package artFairs.bean;
 
 import lombok.Data;
 
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.bean
+ * 
+ * @file ArtFairsDTO.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description ArtFairsBeans, use lombok
+ * 
+ */
+
 @Data
 public class ArtFairsDTO {
 	private String title;			//아트페어 이름

@@ -9,12 +9,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import artFairs.bean.ArtFairsDTO;
+import lombok.RequiredArgsConstructor;
+
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.dao
+ * 
+ * @file ArtFairsDAO.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description ArtFairs의 글 쓰기, 글 수정, view를 위한 ArtFairDAO Class, use lombok
+ * 
+ */
 
 @Repository
+@RequiredArgsConstructor
 public class ArtFairsDAO {
 	
-	@Autowired
-	private SqlSessionTemplate sqlSession;
+	private final SqlSessionTemplate sqlSession;
 	
 	public List<ArtFairsDTO> getAtrFairsMain() {
 		return sqlSession.selectList("mybatis.artFairsMapper.getAtrFairsMain");

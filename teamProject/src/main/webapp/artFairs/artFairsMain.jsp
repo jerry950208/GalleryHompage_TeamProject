@@ -22,10 +22,11 @@
 		<div class="main_all">
 			<c:forEach var="dto" items="${list }">
 				<div class="af">
-					<a href="artFairsView.do?title=${dto.title}"> <img
-						id="mainimg_src" src="${dto.mainimg_src}">
-					</a> <br> <span class="D">${dto.afdate}</span> <br> <span
-						class="T">${dto.title}</span>
+					<a href="artFairsView.do?title=${dto.title}"> 
+						<img id="mainimg_src" src="${dto.mainimg_src}">
+					</a> <br> 
+					<span class="D">${dto.afdate}</span> <br> 
+					<span class="T">${dto.title}</span>
 				</div>
 			</c:forEach>
 			
