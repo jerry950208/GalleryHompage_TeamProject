@@ -1,4 +1,15 @@
 @charset "UTF-8";
+
+/*
+	Using this File
+	- galleries_About.jsp
+	- galleries_AboutForm.jsp
+	- galleries_BK_Hannam.jsp
+	- galleries_BK_Itaewon.jsp
+	- galleries_Internship_WriteForm.jsp
+	- galleries_Internship.jsp
+*/
+
 #galleries_Frame {
 	width: 1000px;
 	height: 1200px;

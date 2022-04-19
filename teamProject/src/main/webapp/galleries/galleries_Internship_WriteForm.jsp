@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/galleries_Frame.css">
 <title>Insert title here</title>
 <script type="text/javascript">
 $(function () {
@@ -17,53 +18,6 @@ $(function () {
     });
 });
 </script>
-<style type="text/css">
-#galleries_Frame {
-	width: 1000px;
-	height: 900px;
-	margin: auto;
-	margin-top: 10em;
-}
-#galleries_nav {
-	float: left; 
-	width: 15%;
-	font: 22px barlow-medium, barlow, sans-serif;
-	
-}
-#galleries_nav td {
-	padding: 10px;
-}
-#galleries_nav_About {
-	 padding: 10px;
-}
-#galleries_Content {
-	float: right; 
-	text-align: justify; 
-	width: 75%;
-}
-#galleries_Content_Title {
-	text-align: right;
-	font: 30px barlow-medium, barlow, sans-serif;
-	padding: 8px;
-}
-#galleries_UnderLine {
-	border-top: 5px solid black;
-	margin-bottom: 3em; 
-}
-#galleries_Content:after {
-	clear: both;
-}
-a {
-	text-decoration: none;
-	color: black;
-}
-#content {
-	font: 17px barlow-extralight, barlow, sans-serif;
-	color: #121212;
-	font-weight: lighter;
-	line-height: 130%;
-}
-</style>
 </head>
 <body>
 	<div id="galleries_Frame">
@@ -93,18 +47,12 @@ a {
 			
 			<div>
 				<form action="../galleries/galleries_Internship_Write.do">
-					<textarea rows="50em" cols="105em" name="internship_Content">
+					<textarea rows="40em" cols="100em" name="internship_Content" >
 						${internship_Content }
 					</textarea>
 					<input type="submit" value="저장">
 				</form>
 			</div>
-			
-			
-		</div>
-		
-		<div>
-			
 		</div>
 	</div>
 	

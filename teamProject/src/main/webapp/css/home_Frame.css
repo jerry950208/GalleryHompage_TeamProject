@@ -52,44 +52,50 @@ input#reservation_Btn {
 #exhibition_location > table {
 	width: 100%;
 }
-#past_Exhibition_background_color {
-	width: 1900px; 
+#home_pastEx {
+	width: 100%; 
 	height: 1400px; 
-	background-color: #F2F2F2; 
-	margin: 48px;
-	margin-left: 0;
+	background-color: #F2F2F2;
 }
-#past_Exhibition_Frame {
-	width: 1100px;
+#pastEx_Frame {
+	width: 1000px;
 	margin: auto;
 }
-#past_Exhibition_Title {
-	margin-left: 1em;
+#pastEx_Title {
 	padding-top:100px;
 	padding-bottom:50px;
 	font-weight:bold;
 	color:dimgray;
 	font: 33px barlow-medium, barlow, sans-serif;
 }
-#past_Exhibition_content {
+.pastEx_content {
 	width: 1000px;
-	height: 570px;
-	margin: auto;
+	display: inline-block;
+	text-align: center;
 }
-#past_Exhibition_content > div {
-	padding-right: 70px;
+.pastEx_incontent{
+	width: 320px;
+	display: inline-block;
+	text-align: center;
 	height: 500px;
-	float: left;
+	margin: 0 auto;
+	vertical-align: top;
 }
-#past_Exhibition_content > div:after {
-	clear: both;
+.pastEx_img{
+	width: 205px;
+	height: 290px;
 }
-#past_Exhibition_TitleName{
-	 font: 19px barlow-medium, barlow, sans-serif; 
+
+.pastEx_titleName{
+	 font: 16px barlow-medium, barlow, sans-serif; 
 	 margin: 10px 0px;
+	 width: 300px;
 }
-#past_Exhibition_ArtistName, #past_Exhibition_Date{
-	font: 18px barlow-extralight, barlow, sans-serif;
+.pastEx_artistName{
+	font: 14px barlow-extralight, barlow, sans-serif;
+	display: inline-block;
+	margin: 3px 0px;
+	width: 300px;
 }
 #subscribe_Frame {
 	width: 100%;

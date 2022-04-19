@@ -21,6 +21,18 @@ public class ExController {
    @Autowired
    private ExService exService;
    
+   @RequestMapping("/main/home.do")
+	public ModelAndView home(HttpServletRequest request) {
+		List<ExDTO> list_2220 = exService.exList_2220();
+		
+		ModelAndView modelAndView = new ModelAndView();
+
+		modelAndView.addObject("list_2220", list_2220);
+		modelAndView.addObject("ref", "../main/home.jsp");
+		modelAndView.setViewName("../main/index.jsp");
+		return modelAndView;
+	}
+   
    @RequestMapping("/exhibition/exhibition.do")
    public ModelAndView exList(HttpServletRequest request) {
       

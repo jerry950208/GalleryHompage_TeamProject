@@ -1,17 +1,32 @@
 package galleries.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import galleries.bean.ContactDTO;
 import galleries.dao.ContactDAO;
+import lombok.RequiredArgsConstructor;
+
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package galleries.controller
+ * 
+ * @file ContactServiceImpl.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description 이메일을 보내고 DB에 저장하기 위한 ContackServiceImpl Class, use lombok
+ * 		 		DB Table : contact
+ * 		 		mapping  : contact-mapping.xml
+ */
 
 @Service
+@RequiredArgsConstructor
 public class ContactServiceImpl implements ContactService {
 
-	@Autowired
-	private ContactDAO dao;
-	
+	private final ContactDAO dao;
 	
 	@Override
 	public int insertContact(ContactDTO dto) {

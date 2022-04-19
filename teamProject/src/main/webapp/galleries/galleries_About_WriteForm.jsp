@@ -5,65 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/galleries_Frame.css">
 <script type="text/javascript">
 $(function () {
     $(document).ready(function () {
+    	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
         $("#Galleries").css("color", "lightgray").on("click", function (event) {
             event.preventDefault();
         });
+        /* nav쪽에 About을 클릭시에 해당 글자 색 변경, 클릭 안되게 설정 */
         $("#galleries_nav_About > a").css("color", "lightgray").on("click", function (event) {
             event.preventDefault();
         });
     });
 });
 </script>
-
-<style type="text/css">
-#galleries_Frame {
-	width: 1000px;
-	height: 900px;
-	margin: auto;
-	margin-top: 10em;
-}
-#galleries_nav {
-	float: left; 
-	width: 15%;
-	font: 22px barlow-medium, barlow, sans-serif;
-	
-}
-#galleries_nav td {
-	padding: 10px;
-}
-#galleries_nav_About {
-	 padding: 10px;
-}
-#galleries_Content {
-	float: right; 
-	text-align: justify; 
-	width: 75%;
-}
-#galleries_Content_Title {
-	text-align: right;
-	font: 30px barlow-medium, barlow, sans-serif;
-	padding: 8px;
-}
-#galleries_UnderLine {
-	border-top: 5px solid black;
-	margin-bottom: 3em; 
-}
-a {
-	text-decoration: none;
-	color: black;
-}
-
-
-
-
-
-</style>
 </head>
 <body>
 	<div id="galleries_Frame">
+		<!-- 좌측 nav -->
 		<div id="galleries_nav">
 			<table>
 				<tr>
@@ -84,17 +44,22 @@ a {
 			</table>
 		</div>
 		
+		<!-- About Content -->
 		<div id="galleries_Content">
+			<!-- Content쪽 상단 Title -->
 			<div id="galleries_Content_Title">About</div>
+			<!-- Content쪽 Title 하단 밑줄 -->
 			<div id="galleries_UnderLine"></div>
+			<!-- Content -->
 			<div id="content">
+				<!-- 버튼 클릭시 galleries_About_Write로 이동 -->
 				<form action="../galleries/galleries_About_Write.do">
-						<textarea rows="50em" cols="105em" name="about_Content">
+						<!-- 수정 내용 입력할 textarea -->
+						<textarea rows="40em" cols="90em" name="about_Content">
 							${about_Content }
 						</textarea>
 					<input type="submit" value="저장">
 				</form>
-				
 			</div>
 		</div>
 	</div>

@@ -1,16 +1,30 @@
 package galleries.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import galleries.bean.GalleriesDTO;
 import galleries.dao.GalleriesDAO;
+import lombok.RequiredArgsConstructor;
+
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package galleries.controller
+ * 
+ * @file GalleriesServiceImpl.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description galleries의 글 쓰기, 글 수정을 위한 GalleriesServiceImpl Class
+ * 
+ */
 
 @Service
+@RequiredArgsConstructor
 public class GalleriesServiceImpl implements GalleriesService {
 	
-	@Autowired
-	private GalleriesDAO dao;
+	private final GalleriesDAO dao;
 	
 	@Override
 	public int updateAbout(String about_Content) {

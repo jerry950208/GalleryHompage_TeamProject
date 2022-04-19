@@ -11,11 +11,11 @@
 $(function () {
 	
     $(document).ready(function () {
-    	// 상단 menu에 Galleries를 클릭했을경우, 해당 글자 색 변경, 클릭 안되게 설정
+    	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
     	$("#Galleries").css("color", "lightgray").on("click", function (event) {
             event.preventDefault();
         });
-    	// nav쪽에 About을 클릭시에 해당 글자 색 변경, 클릭 안되게 설정
+    	/* nav쪽에 About을 클릭시에 해당 글자 색 변경, 클릭 안되게 설정 */
         $("#galleries_nav_About > a").css("color", "lightgray").on("click", function (event) {
             event.preventDefault();
         });
@@ -25,7 +25,7 @@ $(function () {
 </head>
 <body>
 	<div id="galleries_Frame">
-		<!-- nav -->
+		<!-- 좌측 nav -->
 		<div id="galleries_nav">
 			<table>
 				<tr>
@@ -65,14 +65,12 @@ $(function () {
 			<!-- Content -->
 			<div id="content">
 				<div>
-					<!-- Content 내용 -->
+					<!-- About Content 내용 -->
 					<pre>
 						${about_Content }
 					</pre>
-					<!--  
-						 About_Content내용 수정을 위해서 About_Write_Form으로 이동하기 위한 버튼
-						 나중에 login기능 추가될경우 admin에게만 버튼 보이게 설정 해야됨
-					-->
+					
+					<!-- 세션의 memid값이 null이 아니면 "글수정" 버튼이 보이게 되고 클릭시 글수정 화면으로 이동 -->
 					<c:if test="<%=session.getAttribute(\"memid\") != null%>">
 						<input type="button" value="글 수정" onclick="location.href='../galleries/galleries_About_WriteForm.do'">
 					</c:if>

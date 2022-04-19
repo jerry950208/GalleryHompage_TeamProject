@@ -46,3 +46,9 @@
 div > table {
 	width: 700px;
 }
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 22%;
+    bottom: 50px;
+    z-index: 999;
+}

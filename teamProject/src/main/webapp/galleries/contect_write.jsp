@@ -7,14 +7,14 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
 <script type="text/javascript">
-	//데이터 값이 안넘어감 다시 확인해보기
+	// 이메일을 보내기 위한 js코드
 	window.onload = function() {
 		
 		Email.send({
 			Host : "smtp.gmail.com",
 			Username : "dogcat281@gmail.com",	// 사용자이름
-			Password : "aqhbmasfcxrrhjvf",		// 본인의 gmail 비밀번호
-			To : 'dogcat281@gmail.com',			// 해당 주소로 메일이 간다
+			Password : "aqhbmasfcxrrhjvf",		// 본인의 gmail 비밀번호		// 본인의 email pwd
+			To : 'dogcat281@gmail.com',			// 해당 주소로 메일이 간다	
 			From : 'dogcat281@gmail.com',		// 보낼사람의 gmail주소
 			Subject : "Contact",				// 제목
 			Body : `

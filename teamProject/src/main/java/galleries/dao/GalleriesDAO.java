@@ -4,12 +4,28 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import lombok.RequiredArgsConstructor;
+
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package galleries.dao
+ * 
+ * @file GalleriesDAO.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description Galleries의 글 쓰기, 글 수정을 위한 GalleriesDAO Class
+ * 
+ */
 
 @Repository
+@RequiredArgsConstructor
 public class GalleriesDAO {
 	
-	@Autowired
-	private SqlSessionTemplate sqlSession;
+	private final SqlSessionTemplate sqlSession;
 	
 	public  int updateAbout(String about_Content) {
 		return sqlSession.update("mybatis.galleriesMapper.updateAbout", about_Content);

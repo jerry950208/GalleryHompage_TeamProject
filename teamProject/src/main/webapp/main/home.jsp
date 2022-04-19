@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../css/home_Frame.css?v=0.3">
+<link rel="stylesheet" type="text/css"
+	href="../css/home_Frame.css?v=0.4">
 <script type="text/javascript">
 	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
 	$(document).ready(function () {
-	    $("#HOME").css("color", "lightgray").on("click", function (event) {
+	    $("#HOME").css("color", "lightgray").on("click", function (event) {	// id가 HOME인 태그의 색 : 밝은 갈색, 클릭 이벤트 비활성화
 	        event.preventDefault();
 	    });
 	});
@@ -18,31 +19,63 @@
 </head>
 <body>
 
-
 	<!-- 전체 프레임 -->
 	<div id="home_Frame">
+		<!-- 예약 구역 시작 -->
 		<div id="reservation_Sector">
-			<c:forEach var="i" begin="1" end="3" step="1">
-				<div id="reservation_float">
-					<p>
-						<a href="#">
-							<img alt="" src="../image/ex1.png">
-						</a>
-					</p>
-					
-					<p>
-						<a id="exhibition_Title">
-							Re, Vitality
-						</a>
-					</p>
-					
-					<p id="exhibition_Artist">이길래 개인전</p>
-					<p id="exhibition_Date">2022.03.10 - 04.07</p>
-					<p id="exhibition_Floor">BK itaewon B1-3F</p><br><br>
-					<input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='https://booking.naver.com/booking/12/bizes/659505'">
-				</div>
-			</c:forEach>
-			
+			<div id="reservation_float">
+				<p>
+					<a href="#"> <img alt="" src="../image/ex1.png" width="300px"
+						height="410px">
+					</a>
+				</p>
+
+				<p>
+					<a id="exhibition_Title"> Re, Vitality </a>
+				</p>
+
+				<p id="exhibition_Artist">이길래 개인전</p>
+				<p id="exhibition_Date">2022.03.10 - 04.07</p>
+				<p id="exhibition_Floor">BK itaewon B1-3F</p>
+				<br>
+				<br> <input type="button" value="예약하기" id="reservation_Btn">
+			</div>
+			<div id="reservation_float">
+				<p>
+					<a href="#"> <img alt="" src="../image/ex2.png" width="300px"
+						height="410px">
+					</a>
+				</p>
+
+				<p>
+					<a id="exhibition_Title"> Restoration of Relationships </a>
+				</p>
+
+				<p id="exhibition_Artist">박윤경 개인전</p>
+				<p id="exhibition_Date">2022.03.11 - 04.08</p>
+				<p id="exhibition_Floor">BK Hannam 1F</p>
+				<br>
+				<br> <input type="button" value="예약하기" id="reservation_Btn">
+			</div>
+			<div id="reservation_float">
+				<p>
+					<a href="#"> <img alt="" src="../image/ex3.png" width="300px"
+						height="410px">
+					</a>
+				</p>
+
+				<p>
+					<a id="exhibition_Title"> Borderless Universe </a>
+				</p>
+
+				<p id="exhibition_Artist">강주리 김병주 박선기 정해윤</p>
+				<p id="exhibition_Date">2022.03.17 - 04.14</p>
+				<p id="exhibition_Floor">BK Hannam 2-3F</p>
+				<br>
+				<br> <input type="button" value="예약하기" id="reservation_Btn">
+			</div>
+
+
 			<div id="exhibition_location">
 				<table>
 					<tr>
@@ -54,137 +87,38 @@
 				</table>
 			</div>
 		</div>
-		
-		<!-- 지난 전시회 -->
-		<div id="past_Exhibition_background_color">
-			<div id="past_Exhibition_Frame">
-				<p id="past_Exhibition_Title">Past Exhibitions</p>
-				<div id="past_Exhibition_content">
-					<!-- 여기도 for문 고민 -->
-					<div>
-						<a href="#">
-							<img alt="" src="../image/s2_1.png">
-						</a>
-						<div id="past_Exhibition_TitleName">
-							The Hidden Masterpiece
-						</div>
-						<div id="past_Exhibition_ArtistName">
-						구본창, 김근태, 김동유, 김춘수,<br>
-						김호득, 박다원, 서용선, 이교준,<br>
-						장승택, 제여란, 차계남, 최상철,<br>
-						최진욱 <br>
-						</div>
-						<div id="past_Exhibition_Date">
-							2022.01.20 - 02.24
-						</div>
-					</div>
-					<div>
-						<a href="#">
-							<img alt="" src="../image/s2_2.png">
-						</a>
-						<div id="past_Exhibition_TitleName">
-							Garden of light
-						</div>
-						<div id="past_Exhibition_ArtistName">
-							권용래
-						</div>
-						<div id="past_Exhibition_Date">
-							2021.11.18 - 12.29
-						</div>
-					</div>
-					<div>
-						<a href="#">
-							<img alt="" src="../image/s2_3.png">
-						</a>
-						<div id="past_Exhibition_TitleName">
-							The Gathering, Bystanders
-						</div>
-						<div id="past_Exhibition_ArtistName">
-							한재열
-						</div>
-						<div id="past_Exhibition_Date">
-							2021.11.11 - 12.29
-						</div>
-					</div>
-				</div>
+		<!-- 예약 구역 종료 -->
+
+		<!-- 지난 전시회 나열 시작 -->
+		<div id="home_pastEx">
+			<div id="pastEx_Frame">
+				<p id="pastEx_Title">Past Exhibitions</p>
+				<div class="pastEx_content">
 				
-				<div id="past_Exhibition_content">
-					<div>
-						<a href="#">
-							<img alt="" src="../image/s2_4.png">
-						</a>
-						<div id="past_Exhibition_TitleName">
-							UTOPIA: NOW HERE
+					<c:forEach var="exhibition" begin="0" end="5" step="1" items="${list_2220}"><!-- 지난 전시회를 list로 가져와서 상위 6개만 보여줌 -->
+						<div class="pastEx_incontent">
+							<a href="../exhibition/exhibitionDetail.do?seq=${exhibition.seq}">	<!-- 사진 클릭시 해당 exhibition으로 이동 -->
+								<img src="${exhibition.ex_img}" class="pastEx_img">				<!-- 지난 전시회 사진 -->
+							</a>
+							<div class="pastEx_titleName">${exhibition.ex_titleName }</div>		<!-- 지난 전시회 타이틀 이름 -->
+							<div class="pastEx_artistName">${exhibition.ex_artistName }</div>	<!-- 지난 전시회 아티스트 이름 -->
+							<div class="pastEx_artistName">${exhibition.ex_date}</div>			<!-- 지난 전시회 날짜 -->
 						</div>
-						<div id="past_Exhibition_ArtistName">
-							장승택, 권용래, 박종규
-						</div>
-						<div id="past_Exhibition_Date">
-							2021.08.19 - 09.16
-						</div>
-					</div>
-					
-					<div>
-						<a href="#">
-							<img alt="" src="../image/s2_5.png">
-						</a>
-						<div id="past_Exhibition_TitleName">
-							It's The Hard Knock Life
-						</div>
-						<div id="past_Exhibition_ArtistName">
-							우국원
-						</div>
-						<div id="past_Exhibition_Date">
-							2021.06.10 - 07.29
-						</div>
-					</div>
-					
-					<div>
-						<a href="#">
-							<img alt="" src="../image/s2_6.png">
-						</a>
-						<div id="past_Exhibition_TitleName">
-							Maniere-noir: RoyalBlue
-						</div>
-						<div id="past_Exhibition_ArtistName">
-							신선주
-						</div>
-						<div id="past_Exhibition_Date">
-							2021.04.01 - 05.20
-						</div>
-					</div>				
+					</c:forEach>
 				</div>
-				
-				<div>
-					<table>
-						<tr>
-							<td>
-								<div style="width: 390px; height: 1px; border: 1px solid #ccc; background-color: #ccc;"></div>
-							</td>
-							
-							<td>
-								<div style="font: 16px barlow-medium, barlow, sans-serif; color: #ccc;">
-									See&ensp;More
-								</div>
-							</td>
-							
-							<td>
-								<div style="width: 390px; height: 1px; border: 1px solid #ccc; background-color: #ccc;"></div>
-							</td>
-						</tr>
-					</table>
-				</div>
+				<a href="../exhibition/exhibition.do">						<!-- see_more 클릭시 Exhibition으로 이동 -->
+					<img alt="see more" src="../image/see_moreJPG.JPG">		<!-- see_more 이미지 -->
+				</a>
 			</div>
 		</div>
+		<!-- 지난 전시회 나열 종료 -->
 		
-		<!-- Subscribe -->
+		<!-- Subscribe to Our Newsletter 시작 -->
 		<div id="subscribe_Frame">
-			<div id="subscribe_Move_Center">
+			<form id="subscribe_Move_Center" action="#">
 				<table>
 					<tr>
-						<td id="subscribe_Title">
-							Subscribe to Our Newsletter
-						</td>
+						<td id="subscribe_Title">Subscribe to Our Newsletter</td>
 					</tr>
 					<tr>
 						<td>
@@ -193,18 +127,18 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="email" name="email" placeholder="Enter your email here*" id="subscribe_Email">
+							<input type="email" name="email" placeholder="Enter your email here*" id="subscribe_Email" required="required">
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="button" value="SEND>" onclick="#" id="subscribe_Btn">
+							<input type="submit" value="SEND>" onclick="#" id="subscribe_Btn">
 						</td>
 					</tr>
 				</table>
-			</div>
+			</form>
 		</div>
-		
+		<!-- Subscribe to Our Newsletter 종료 -->
 	</div>
 </body>
 </html>
