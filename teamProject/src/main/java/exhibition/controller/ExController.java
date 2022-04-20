@@ -18,6 +18,7 @@ import exhibition.bean.SoloDTO;
 
 @Controller
 public class ExController {
+	
    @Autowired
    private ExService exService;
    
@@ -287,11 +288,12 @@ public class ExController {
          modelAndView.addObject("ref", "../exhibition/exhibition_detail_group.jsp");
       } else {
          s_dto = exService.getSoloInfo(seq);
+         
          if(s_dto == null) {	// 데이터 값이 없을경우 exhibition.jsp로 돌아간다
         	 modelAndView.addObject("ref", "../exhibition/exhibition.jsp");
          }
         
-         else {						// 데이터가 있을경우 페이지 이동
+         else {					// 데이터가 있을경우 페이지 이동
 	         main_img = s_dto.getMain_img();
 	         img = main_img.split("#");
 	         works_imgString = s_dto.getWorks_img();

@@ -15,7 +15,7 @@ import exhibition.dao.ExDAO;
 public class ExServiceImpl implements ExService{
 
 	@Autowired
-	ExDAO dao;
+	private ExDAO dao;
 
 	@Override
 	public List<ExDTO> exList_2220() {

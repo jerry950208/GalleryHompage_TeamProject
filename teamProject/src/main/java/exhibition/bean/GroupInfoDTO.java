@@ -1,6 +1,7 @@
 package exhibition.bean;
 
 public class GroupInfoDTO {
+	
 	private int seq;
 	private String titleName;
 	private String ex_date;
