@@ -19,12 +19,7 @@ import lombok.RequiredArgsConstructor;
 public class ExDAO {
 	
 	/*exhibition.jsp*/
-<<<<<<< HEAD
 	private final SqlSessionTemplate sqlSession;
-=======
-	@Autowired
-	private SqlSessionTemplate sqlSession;
->>>>>>> 2d03b10aa6e5a65b8a582fee320885f153d4d819
 	
 	public List<ExDTO> exList_2220(){
 		return sqlSession.selectList("mybatis.exMapper.exList_2220");
@@ -39,11 +34,9 @@ public class ExDAO {
 		return sqlSession.selectList("mybatis.exMapper.exList_1311");
 	}
 	
-	/*그룹전시 정보*/
 	public GroupInfoDTO getInfo(int seq) {
 		return sqlSession.selectOne("mybatis.exMapper.getInfo", seq);
 	}
-	/*그룹전시 이미지*/
 	public List<GroupImgDTO> getImg(int startNum, int endNum) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("startNum", startNum);
@@ -52,7 +45,6 @@ public class ExDAO {
 		return sqlSession.selectList("mybatis.exMapper.getImg", map);
 	}
 	
-	/*개인전*/
 	public SoloDTO getSoloInfo(int seq) {
 		return sqlSession.selectOne("mybatis.exMapper.getSoloInfo", seq);
 	}
