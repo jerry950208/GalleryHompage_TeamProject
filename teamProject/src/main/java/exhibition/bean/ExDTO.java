@@ -37,4 +37,6 @@ public class ExDTO {
 	public void setEx_artistName(String ex_artistName) {
 		this.ex_artistName = ex_artistName;
 	}
+	
+	
 }

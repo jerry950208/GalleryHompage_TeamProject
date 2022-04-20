@@ -11,6 +11,10 @@
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script src="../lightbox/js/lightbox.js"></script>
 <script type="text/javascript" src="../script/ex_detail.js"></script>
+	<script>
+
+
+	</script>
 </head>
 <body>
 	<div id="ex_detail_solo_wrapper">
