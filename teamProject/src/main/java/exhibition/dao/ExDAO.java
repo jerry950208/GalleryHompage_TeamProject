@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import exhibition.bean.ExDTO;
@@ -18,7 +19,12 @@ import lombok.RequiredArgsConstructor;
 public class ExDAO {
 	
 	/*exhibition.jsp*/
+<<<<<<< HEAD
 	private final SqlSessionTemplate sqlSession;
+=======
+	@Autowired
+	private SqlSessionTemplate sqlSession;
+>>>>>>> 2d03b10aa6e5a65b8a582fee320885f153d4d819
 	
 	public List<ExDTO> exList_2220(){
 		return sqlSession.selectList("mybatis.exMapper.exList_2220");

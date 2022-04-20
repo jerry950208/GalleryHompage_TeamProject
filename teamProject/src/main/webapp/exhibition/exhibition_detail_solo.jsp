@@ -11,7 +11,14 @@
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script src="../lightbox/js/lightbox.js"></script>
 <script type="text/javascript" src="../script/ex_detail.js"></script>
+<<<<<<< HEAD
 
+=======
+	<script>
+
+
+	</script>
+>>>>>>> 2d03b10aa6e5a65b8a582fee320885f153d4d819
 </head>
 <body>
 	<div id="ex_detail_solo_wrapper">
