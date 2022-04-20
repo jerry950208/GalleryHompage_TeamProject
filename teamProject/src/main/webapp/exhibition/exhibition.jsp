@@ -11,7 +11,13 @@
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 jQuery(function ($) {
-    $("#exhibition_wrapper").css("display", "none");
+	
+	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
+	$("#Exhibitions").css("color", "lightgray").on("click", function(event) {
+		event.preventDefault();
+	});
+    
+	$("#exhibition_wrapper").css("display", "none");
     $("#exhibition_wrapper").fadeIn(2000);
     $("a.transition").click(function (event) {
         event.preventDefault();

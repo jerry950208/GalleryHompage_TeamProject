@@ -33,9 +33,6 @@ public class ExDAO {
 		return sqlSession.selectList("mybatis.exMapper.exList_1311");
 	}
 	
-
-
-	
 	/*그룹전시 정보*/
 	public GroupInfoDTO getInfo(int seq) {
 		return sqlSession.selectOne("mybatis.exMapper.getInfo", seq);

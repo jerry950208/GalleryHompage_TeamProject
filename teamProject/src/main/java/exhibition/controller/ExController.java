@@ -51,7 +51,7 @@ public class ExController {
       return modelAndView;
    }
 
-   @RequestMapping(value="/exhibition/exhibitionDetail.do")
+   @RequestMapping("/exhibition/exhibitionDetail.do")
    public ModelAndView getSingle(HttpServletRequest request) {
       int seq = Integer.parseInt(request.getParameter("seq"));
       
@@ -60,29 +60,29 @@ public class ExController {
 
       /* 그룹전 */
       GroupInfoDTO g_info_dto = new GroupInfoDTO();
-      GroupImgDTO g_img_dto = new GroupImgDTO();
+//      GroupImgDTO g_img_dto = new GroupImgDTO();
       // 작가별로 이미지를 담을 리스트
       List<GroupImgDTO> art = null;
       // 이미지가 담겨있는 리스트를 담을 리스트
       List<List<GroupImgDTO>> list = new ArrayList<List<GroupImgDTO>>();   
       //이름 나눠서 이름을 리스트에 담기
       String artistName = null;
-      String[] nameElements =null;
+      String[] nameElements = null;
       List<String> nameList = null;      
       
       /*그룹전끝*/
       
       /*개인전*/
-      SoloDTO s_dto = new SoloDTO();
+      SoloDTO s_dto = null;
       //작업사진
       String works_imgString = null;
       String[] works_imgElement = null;
-      List<String> works_img =null;
+      List<String> works_img = null;
       /*개인전끝*/
       
       //메인사진 나눌때
-      String main_img =null;
-      String[] img =null;
+      String main_img = null;
+      String[] img = null;
       
       
       //《The Hidden Masterpice》
@@ -133,7 +133,7 @@ public class ExController {
 //            //System.out.println(nameList.get(i));
 //            for(int j=0; j<list.get(i).size(); j++) {
 //               //작품사진 src 주소
-//               String src = list.get(i).get(j).getGroup_img();
+//               String src = (String)list.get(i).get(j).getGroup_img();
 //               System.out.println(src);
 //            }
 //         }   
@@ -257,7 +257,7 @@ public class ExController {
          modelAndView.addObject("ref", "../exhibition/exhibition_detail_group.jsp");
       
       //《북경춘신》
-      }else if(seq==14) {
+      } else if(seq==14) {
          g_info_dto = exService.getInfo(seq);
          
          art = exService.getImg(134, 144);
@@ -287,16 +287,23 @@ public class ExController {
          modelAndView.addObject("ref", "../exhibition/exhibition_detail_group.jsp");
       } else {
          s_dto = exService.getSoloInfo(seq);
-         main_img = s_dto.getMain_img();
-         img = main_img.split("#");
-         works_imgString = s_dto.getWorks_img();
-         works_imgElement = works_imgString.split("#");
-         works_img = Arrays.asList(works_imgElement);
-         
-         modelAndView.addObject("dto",s_dto);
-         modelAndView.addObject("img",img);
-         modelAndView.addObject("works_img",works_img);
-         modelAndView.addObject("ref","../exhibition/exhibition_detail_solo.jsp");
+         if(s_dto == null) {	// 데이터 값이 없을경우 exhibition.jsp로 돌아간다
+        	 modelAndView.addObject("ref", "../exhibition/exhibition.jsp");
+         }
+        
+         else {						// 데이터가 있을경우 페이지 이동
+	         main_img = s_dto.getMain_img();
+	         img = main_img.split("#");
+	         works_imgString = s_dto.getWorks_img();
+	         works_imgElement = works_imgString.split("#");
+	         works_img = Arrays.asList(works_imgElement);
+	         
+	         
+	         modelAndView.addObject("dto",s_dto);
+		     modelAndView.addObject("img",img);
+		     modelAndView.addObject("works_img",works_img);
+		     modelAndView.addObject("ref","../exhibition/exhibition_detail_solo.jsp");
+         }
       }   
       /*인덱스 화면으로 리턴*/
       modelAndView.setViewName("../main/index.jsp");

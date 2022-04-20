@@ -18,7 +18,6 @@ public class ArtistDAO {
 
 //    @Autowired
 //    SqlSessionTemplate sqlSession;
-
     private final SqlSessionTemplate sqlSession;
 
     public List<ArtistDTO> getArtistAll() {

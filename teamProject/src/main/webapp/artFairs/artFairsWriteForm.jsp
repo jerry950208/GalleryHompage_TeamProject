@@ -23,7 +23,7 @@
 </style>
 </head>
 <body>
-	<div class="div">
+	<div class="div"  style="text-align: center; margin-top: 3em;">
 		<form action="artFairsWrite.do" method="post" enctype="multipart/form-data">
 			<table align="center" id="table">
 				<tr>
@@ -79,7 +79,7 @@
 					<td class="td"><input class="input" type="file" name="img_src3"></td>
 				</tr>
 			</table>
-			<div class="button">
+			<div class="button" style="margin-top: 2em;  margin-bottom: 2em;">
 				<button type="submit" id="button">등록</button> 
 				<button type="reset" id="button">다시작성</button>
 			</div>

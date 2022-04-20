@@ -17,7 +17,7 @@
 </script>
 </head>
 <body>
-	<div class="div">
+	<div class="div"  style="text-align: center; margin-top: 3em;">
 		<form action="artFairsModify.do" method="post" enctype="multipart/form-data">
 			<input type="hidden" value="${dto.title }" name="ori_title">
 			<table align="center" id="table">
@@ -100,7 +100,7 @@
 					</td>
 				</tr>
 			</table>
-			<div class="button">
+			<div class="button" style="margin-top: 2em;  margin-bottom: 2em;">
 				<button type="submit" id="button">수정</button> 
 				<button type="reset" id="button">다시작성</button>
 			</div>

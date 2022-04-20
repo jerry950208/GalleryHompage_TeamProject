@@ -9,6 +9,11 @@
     <script type="text/javascript">
         $(function () {
             $(document).ready(function () {
+            	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
+				$("#Artists").css("color", "lightgray").on("click", function(event) {
+            		event.preventDefault();
+            	});
+            	
                 // artist_featured_works section json 데이터
                 $.ajax({
                     url: "artist_info_featured_works_Json.do",
@@ -17,7 +22,6 @@
                     success: function (json) {
 
                         // artist featured works  이미지
-
                         let item = json.items;
 
                         // artist featured works 갯수만큼 꺼내서 <ul>에 넣기
@@ -465,9 +469,6 @@
                                 "border-right": "2px solid white"
                             });
                         });
-                    },
-                    error: function (xhr, textStatus, errorThrown) {
-                        alert("[ERROR] " + xhr, status);
                     }
                 })
 
