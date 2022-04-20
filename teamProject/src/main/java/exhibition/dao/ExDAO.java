@@ -11,12 +11,14 @@ import exhibition.bean.ExDTO;
 import exhibition.bean.GroupImgDTO;
 import exhibition.bean.GroupInfoDTO;
 import exhibition.bean.SoloDTO;
+import lombok.RequiredArgsConstructor;
 
 @Repository
+@RequiredArgsConstructor
 public class ExDAO {
 	
 	/*exhibition.jsp*/
-	private SqlSessionTemplate sqlSession;
+	private final SqlSessionTemplate sqlSession;
 	
 	public List<ExDTO> exList_2220(){
 		return sqlSession.selectList("mybatis.exMapper.exList_2220");

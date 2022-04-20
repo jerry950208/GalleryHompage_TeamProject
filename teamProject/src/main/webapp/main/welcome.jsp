@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <script type="text/javascript"> 
    window.onload = function () {
-      location.href = "home.do";
+      location.href = "../main/home.do";
    }
 </script>
 </head>

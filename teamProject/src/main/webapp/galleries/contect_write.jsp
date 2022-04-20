@@ -12,10 +12,10 @@
 		
 		Email.send({
 			Host : "smtp.gmail.com",
-			Username : "dogcat281@gmail.com",	// 사용자이름
+			Username : "dogcat281@gmail.com",	// 해당 주소로 메일이 간다
 			Password : "aqhbmasfcxrrhjvf",		// 본인의 gmail 비밀번호		// 본인의 email pwd
-			To : 'dogcat281@gmail.com',			// 해당 주소로 메일이 간다	
-			From : 'dogcat281@gmail.com',		// 보낼사람의 gmail주소
+			To : "dogcat281@gmail.com",			// 해당 주소로 메일이 간다
+			From : "jerry950208@naver.com",		// 보낼사람의 gmail주소
 			Subject : "Contact",				// 제목
 			Body : `
 				이름 : ${dto.name}<br/><br/>

@@ -16,13 +16,28 @@
 	    });
 	});
 </script>
+<style type="text/css">
+.reservation_Sector {
+   position: relative;
+   animation: fadeInLeft 2s;
+}
+@keyframes fadeInLeft {
+   0% {
+       opacity: 0;
+       transform: translate3d(-100%, 0, 0);
+   }
+   to {
+       opacity: 1;
+       transform: translateZ(0);
+   }
+</style>
 </head>
 <body>
 
 	<!-- 전체 프레임 -->
 	<div id="home_Frame">
 		<!-- 예약 구역 시작 -->
-		<div id="reservation_Sector">
+		<div id="reservation_Sector" class="reservation_Sector">
 			<div id="reservation_float">
 				<p>
 					<a href="#"> <img alt="" src="../image/ex1.png" width="300px"
@@ -91,7 +106,7 @@
 
 		<!-- 지난 전시회 나열 시작 -->
 		<div id="home_pastEx">
-			<div id="pastEx_Frame">
+			<div id="pastEx_Frame" class="reservation_Sector">
 				<p id="pastEx_Title">Past Exhibitions</p>
 				<div class="pastEx_content">
 				

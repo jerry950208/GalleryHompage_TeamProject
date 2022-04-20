@@ -11,6 +11,7 @@
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script src="../lightbox/js/lightbox.js"></script>
 <script type="text/javascript" src="../script/ex_detail.js"></script>
+
 </head>
 <body>
 	<div id="ex_detail_solo_wrapper">
@@ -99,7 +100,7 @@
 			</div>
 			<div id="works_img">
 				<c:forEach var="i" begin="0" end="${works_img.size()-1}" step="1">
-					<a href="${works_img[i]}" data-lightbox="roadtrip"><img alt="" src="${works_img[i]}"></a>
+					<a href="${works_img[i]}" data-lightbox="roadtrip"><img alt="" src="${works_img[i]}"></a>	<!-- light box 플러그인 추가 -->
 				</c:forEach>
 			</div>
 		</div>

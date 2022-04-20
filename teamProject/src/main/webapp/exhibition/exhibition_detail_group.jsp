@@ -146,7 +146,7 @@
             <div id="cv_info_wrapper">
                <div>
                   <c:forEach var="i" begin="0" end="${list.size()-1}" step="1">
-                     <a href="#">
+                     <a href="../artist/artist_info.do?artist=${nameList.get(i)}">
                         <div class="cv_info">
                            <img alt="" src="${list.get(i).get(0).getGroup_img()}" class="cv_info_img">
                            <div class="cv_info_name">${nameList.get(i)}</div>

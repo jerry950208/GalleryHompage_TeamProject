@@ -15,12 +15,13 @@ import exhibition.bean.ExDTO;
 import exhibition.bean.GroupImgDTO;
 import exhibition.bean.GroupInfoDTO;
 import exhibition.bean.SoloDTO;
+import lombok.RequiredArgsConstructor;
 
 @Controller
+@RequiredArgsConstructor
 public class ExController {
 	
-   @Autowired
-   private ExService exService;
+   private final ExService exService;
    
    @RequestMapping("/main/home.do")
 	public ModelAndView home(HttpServletRequest request) {
@@ -289,8 +290,8 @@ public class ExController {
       } else {
          s_dto = exService.getSoloInfo(seq);
          
-         if(s_dto == null) {	// 데이터 값이 없을경우 exhibition.jsp로 돌아간다
-        	 modelAndView.addObject("ref", "../exhibition/exhibition.jsp");
+         if(s_dto == null) {	// 데이터 값이 없을경우 index.jsp로 돌아간다
+        	 modelAndView.addObject("ref", "../main/welcome.jsp");
          }
         
          else {					// 데이터가 있을경우 페이지 이동

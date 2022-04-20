@@ -10,12 +10,13 @@ import exhibition.bean.GroupImgDTO;
 import exhibition.bean.GroupInfoDTO;
 import exhibition.bean.SoloDTO;
 import exhibition.dao.ExDAO;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class ExServiceImpl implements ExService{
 
-	@Autowired
-	private ExDAO dao;
+	private final ExDAO dao;
 
 	@Override
 	public List<ExDTO> exList_2220() {
