@@ -3,21 +3,32 @@ package artist.dao;
 import artist.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.bean
+ * 
+ * @file ArtFairsDTO.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description atrist의 DB연동을 담당하는 DAO Class
+ * 				mapper : artist-mapping.xml
+ * 
+ */
+
 @Repository
 @RequiredArgsConstructor
-//@Primary
 public class ArtistDAO {
 
-//    @Autowired
-//    SqlSessionTemplate sqlSession;
     private final SqlSessionTemplate sqlSession;
 
     public List<ArtistDTO> getArtistAll() {

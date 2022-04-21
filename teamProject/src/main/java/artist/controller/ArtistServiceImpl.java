@@ -8,6 +8,21 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.bean
+ * 
+ * @file ArtFairsDTO.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description artist의 artistimpl Class
+ * 
+ */
+
 @Service
 @RequiredArgsConstructor
 public class ArtistServiceImpl implements ArtistService {

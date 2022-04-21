@@ -7,7 +7,6 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,7 +15,21 @@ import exhibition.bean.ExDTO;
 import exhibition.bean.GroupImgDTO;
 import exhibition.bean.GroupInfoDTO;
 import exhibition.bean.SoloDTO;
-import lombok.RequiredArgsConstructor;
+
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.bean
+ * 
+ * @file ArtFairsDTO.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description exhibitions의 data 처리를 담당하는 Controller Class
+ * 
+ */
 
 @Controller
 @RequiredArgsConstructor

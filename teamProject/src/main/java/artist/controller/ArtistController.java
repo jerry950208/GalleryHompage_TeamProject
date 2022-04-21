@@ -14,6 +14,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.bean
+ * 
+ * @file ArtFairsDTO.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description artist의 data 처리를 담당하는 Controller Class
+ * 
+ */
+
 @Controller
 @RequiredArgsConstructor
 public class ArtistController {

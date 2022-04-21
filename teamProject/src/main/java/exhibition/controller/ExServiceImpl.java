@@ -2,7 +2,6 @@ package exhibition.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import exhibition.bean.ExDTO;
@@ -11,6 +10,21 @@ import exhibition.bean.GroupInfoDTO;
 import exhibition.bean.SoloDTO;
 import exhibition.dao.ExDAO;
 import lombok.RequiredArgsConstructor;
+
+/**
+ * @project GalleryHompage_TeamProject
+ *
+ * @package artFairs.bean
+ * 
+ * @file ArtFairsDTO.java
+ * 
+ * @author Ezen_ac_Team_1
+ * 
+ * @date 2022. 4. 19.
+ * 
+ * @description exhibitions의 ServiceImpl Class
+ * 
+ */
 
 @Service
 @RequiredArgsConstructor
@@ -39,18 +53,18 @@ public class ExServiceImpl implements ExService{
 	}
 
 
-
-	/*그룹전시*/
+	/* 그룹전시 정보 */
 	@Override
 	public GroupInfoDTO getInfo(int seq) {
 		return dao.getInfo(seq);
 	}
-
+	/* 그룹전시 이미지 */
 	@Override
 	public List<GroupImgDTO> getImg(int startNum, int endNum) {
 		return dao.getImg(startNum, endNum);  
 	}
-
+	
+	/* 개인전 */
 	@Override
 	public SoloDTO getSoloInfo(int seq) {
 		return dao.getSoloInfo(seq);
