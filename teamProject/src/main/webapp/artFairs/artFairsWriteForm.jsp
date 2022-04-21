@@ -59,23 +59,23 @@
 					<td class="td"><textarea id="textA" name="artist_name" rows="14" required="required"></textarea></td>
 				</tr>
 				<tr>
-					<td class="td">Fairs Logo</td>
+					<td class="td">Fairs Logo&emsp;*필수입력</td>
 					<td class="td"><input class="input" type="file" name="mainimg_src" required="required"></td>
 				</tr>
 				<tr>
-					<td class="td">images</td>
+					<td class="td">images1&emsp;*필수입력</td>
 					<td class="td"><input class="input" type="file" name="detailimg_src" required="required"></td>
 				</tr>
 				<tr>
-					<td class="td">images</td>
+					<td class="td">images2</td>
 					<td class="td"><input class="input" type="file" name="img_src1"></td>
 				</tr>
 				<tr>
-					<td class="td">images</td>
+					<td class="td">images3</td>
 					<td class="td"><input class="input" type="file" name="img_src2"></td>
 				</tr>
 				<tr>
-					<td class="td">images</td>
+					<td class="td">images4</td>
 					<td class="td"><input class="input" type="file" name="img_src3"></td>
 				</tr>
 			</table>

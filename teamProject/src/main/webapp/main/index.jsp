@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>GalleryBK</title>
 <link rel="stylesheet" type="text/css" href="../css/index_Frame.css?v=0.1">
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../script/index_animation.js"></script>
-
 <script type="text/javascript">
 
 	// 우측 하단 top으로 가는 버튼
@@ -29,8 +28,8 @@
 		});
 		
 		function login() {
-			click++;			// 클릭을 했을경우 1씩 증가
-			if(click / 5 >= 1) {// 5번 이상 클릭을 했을경우
+			click++;				// 클릭을 했을경우 1씩 증가
+			if(click / 5 >= 1) {	// 5번 이상 클릭을 했을경우
 				if(<%=session.getAttribute("memid") == null%>){		// 세션값의 memid가 null일경우 로그인 창
 					location.href="../login/logInForm.do";
 				} 

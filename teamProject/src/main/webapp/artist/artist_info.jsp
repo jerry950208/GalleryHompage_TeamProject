@@ -58,27 +58,6 @@
                             artist_featured_works_next();
                         });
 
-                        $("#artist_exhibitions_prev0").css({
-                            "opacity": "0",
-                            "pointer-events": "none"
-                        });
-
-                        function artist_exhibitions_first_next() {
-                            $("#artist_exhibitions_prev0").css({
-                                "opacity": "1",
-                                "pointer-events": "auto"
-                            });
-                            if (img_position_first == img_count_first - 1) {
-                                $("#artist_exhibitions_next0").hide();
-                            }
-                            if (img_count_first > img_position_first) {
-                                $("#artist_exhibitions_imgs0").animate({
-                                    left: '-=600px'
-                                });
-                            }
-                            img_position_first++;
-                        }
-
                         $("#artist_featured_works_prev").css({
                             "opacity": "0",
                             "pointer-events": "none"
@@ -99,15 +78,6 @@
                                     left: '+=580px'
                                 });
                                 img_position--;
-                                // } else {
-                                //     $("#artist_featured_works_imgs").fadeOut(100, function () {
-                                //         $("#artist_featured_works_imgs").animate({
-                                //             left: "-=" + (img_count - 1) * 580 + "px"
-                                //         });
-                                //         $(this).fadeIn(100);
-                                //     });
-                                //     img_position = 4;
-                                // }
                             }
                         }
 
@@ -126,15 +96,6 @@
                                     left: '-=580px'
                                 });
                                 img_position++;
-                                // } else {
-                                //     $("#artist_featured_works_imgs").fadeOut(100, function () {
-                                //         $("#artist_featured_works_imgs").animate({
-                                //             left: "+=" + (img_count - 1) * 580 + "px"
-                                //         });
-                                //         $(this).fadeIn(100);
-                                //     });
-                                //     img_position = 1;
-                                // }
                             }
                         }
 
@@ -179,11 +140,8 @@
                     data: {"eng_name": "${artist_info.eng_name}"},
                     dataType: "json",
                     success: function (json) {
-                        // alert(json.json_arr[1][0].works);
-                        // alert(json.json_arr[1][1].works);
-                        // alert(json.json_arr[1][2].works);
-                        // alert(json.json_arr[1][3].works);
-                        let json_arr = json.json_arr;
+
+                    	let json_arr = json.json_arr;
 
                         for (let i = 0; i < json_arr.length; i++) {
 

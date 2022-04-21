@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>HOME | GalleryBK</title>
 <link rel="stylesheet" type="text/css"
 	href="../css/home_Frame.css?v=0.4">
 <script type="text/javascript">
@@ -25,11 +25,11 @@
    0% {
        opacity: 0;
        transform: translate3d(-100%, 0, 0);
-   }
-   to {
+}
+to {
        opacity: 1;
        transform: translateZ(0);
-   }
+}
 </style>
 </head>
 <body>

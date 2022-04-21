@@ -15,18 +15,14 @@
 				event.preventDefault();
 			});
 			
-			
-			$("#artist_group_gallery").on("click", function(event) {
-				event.preventDefault();
-			});
-
-			// 32개 데이터만 보여주기
+			// menu의 Artist클 클릭했을때 처음 보여주는 데이터(32개 데이터만 보여주기)
 			$(".artist_info_content:gt(31)").hide();
 		});
 
-		// 첫번째 인덱스는 gt에 적용이 안되므로 따로
+		// 첫번째 인덱스는 gt에 적용이 안되므로 따로 적용
+		// 해당 클래스에 커서가 올라갈경우 서서히 보이고 사라지게 효과를 준다
 		$(".artist_info_content:eq(0)").hover(function() {
-			$(this).children().css("visibility", "visible").fadeIn(300);
+			$(this).children().css("visibility", "visible").fadeIn(300);	
 			$(this).children("div").css("color", "white");
 		}, function() {
 			$(this).children(".artist_info_image").fadeOut(300);
@@ -40,7 +36,8 @@
 			$(this).children(".artist_info_image").fadeOut(300);
 			$(this).children("div").css("color", "black");
 		});
-
+		
+		// 해당 id의 커서가 올라갔을때 커서의 모양을 손가락 모양으로
 		$("#artist_group_gallery").hover(function() {
 			$(this).css("cursor", "pointer");
 		});
