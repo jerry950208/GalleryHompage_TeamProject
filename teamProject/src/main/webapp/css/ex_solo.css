@@ -69,6 +69,13 @@ html{
 	padding-bottom: 200px;
 }
 /* Works section */
+#works_img img:hover{	/* 개인전 작품 사진에 커서가 올라갔을경우 이미지 흐려지면서 살짝 확대되는 기능 */
+   width:250px;
+   height:200px;
+   filter:brightness(70%);
+   transform:scale(1.05);
+   transition:transform 1s;
+}
 #ex_detail_works{padding-bottom:200px;}
 #works_img {
 	width: 800px;

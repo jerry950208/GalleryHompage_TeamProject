@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../css/login_button.css">
-<link rel="stylesheet" type="text/css" href="../css/login.css?v=0.1">
+<link rel="stylesheet" type="text/css" href="../css/login.css?v=0.6">
 <script type="text/javascript" src="../script/loginScript.js"></script>
 </head>
 <body>

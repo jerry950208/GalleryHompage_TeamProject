@@ -49,9 +49,12 @@ select>option{
 	display:inline-block; 
 	width:10px;
 }
-#table{
+table#login_Form_table {
+	width: 400px;
+}
+table#table {
 	border: none;
-	width: 40%;
+	width: 1000px;
 	border-spacing: 40px;
 }
 

@@ -6,8 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="../css/ex_solo.css?v=1" rel="stylesheet">
+<link href="../css/ex_solo.css?v=1.0" rel="stylesheet">
 <link href="../lightbox/css/lightbox.css" rel="stylesheet">
+
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../script/ex_detail.js"></script>
 <script src="../lightbox/js/lightbox.js"></script>
