@@ -11,6 +11,14 @@
 <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../script/ex_detail.js"></script>
 <script src="../lightbox/js/lightbox.js"></script>
+<script type="text/javascript">
+/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
+	$(document).ready(function () {
+	    $("#Exhibitions").css("color", "lightgray").on("click", function (event) {
+	        event.preventDefault();
+	    });
+	});
+</script>
 </head>
 <body>
 	<div id="ex_detail_solo_wrapper">

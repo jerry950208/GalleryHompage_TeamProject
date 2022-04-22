@@ -76,7 +76,6 @@ public class ExController {
 
       /* 그룹전 */
       GroupInfoDTO g_info_dto = new GroupInfoDTO();
-//      GroupImgDTO g_img_dto = new GroupImgDTO();
       // 작가별로 이미지를 담을 리스트
       List<GroupImgDTO> art = null;
       // 이미지가 담겨있는 리스트를 담을 리스트
@@ -138,22 +137,8 @@ public class ExController {
          
          // 작가이름 각각 나눠 배열에 저장 후 리스트 담기
          artistName = g_info_dto.getArtistName();
-         nameElements = artistName.split(" ");
-         nameList = Arrays.asList(nameElements);
-
-         
-//         /* 테스트용 실제화면에선 src변수를 따로 만들어주어야함 */
-//         /* 작가 - 작품사진들 => 작가 - 작품사진들  (반복) 코드 */
-//         for(int i=0; i<list.size(); i++) {
-//            //작가명
-//            //System.out.println(nameList.get(i));
-//            for(int j=0; j<list.get(i).size(); j++) {
-//               //작품사진 src 주소
-//               String src = (String)list.get(i).get(j).getGroup_img();
-//               System.out.println(src);
-//            }
-//         }   
-         
+         nameElements = artistName.split(", ");
+         nameList = Arrays.asList(nameElements); 
          
          //메인 사진 나눠서 배열에 저장
          main_img = g_info_dto.getMain_img().replace("      ", "");
@@ -163,7 +148,8 @@ public class ExController {
          modelAndView.addObject("dto", g_info_dto);
          
          // 작가이름이 담겨있는 리스트 전달
-         modelAndView.addObject("nameList",nameList);
+         modelAndView.addObject("nameList",nameList); 
+         
          // 메인 이미지 쪼개서 전달
          modelAndView.addObject("img", img);
          
@@ -171,8 +157,8 @@ public class ExController {
          modelAndView.addObject("list",list);
          modelAndView.addObject("ref", "../exhibition/exhibition_detail_group.jsp");
       
-         //《Utopia : now here》
-      }else if(seq==2) {
+      //《Utopia : now here》
+      } else if(seq==2) {
          g_info_dto = exService.getInfo(seq);
          
          art = exService.getImg(59, 62);
@@ -203,7 +189,7 @@ public class ExController {
          modelAndView.addObject("ref", "../exhibition/exhibition_detail_group.jsp");
       
       //《Painting and Thereafter》
-      }else if(seq==3) {
+      } else if(seq==3) {
          g_info_dto = exService.getInfo(seq);
 
          art = exService.getImg(75, 82);
@@ -234,7 +220,7 @@ public class ExController {
          modelAndView.addObject("ref", "../exhibition/exhibition_detail_group.jsp");
       
       //《DECONSTRUCTIVISM》
-      }else if(seq==11) {
+      } else if(seq==11) {
          g_info_dto = exService.getInfo(seq);
          
          art = exService.getImg(97, 100);
@@ -293,7 +279,6 @@ public class ExController {
    
          //전체 데이터 전송
          modelAndView.addObject("dto", g_info_dto);
-         //System.out.println(g_info_dto.getIntro_content());
          // 작가 이름만 쪼개서 전달
          modelAndView.addObject("nameList",nameList);
          // 메인 이미지 쪼개서 전달

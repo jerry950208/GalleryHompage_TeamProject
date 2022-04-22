@@ -55,7 +55,7 @@ select>option{
 	border-spacing: 40px;
 }
 
-.login_table_td {
+.login_table_td, .td {
 	border-bottom: 1px solid black;
 }
 .button{

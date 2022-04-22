@@ -40,18 +40,15 @@ public class ArtFairsDAO {
 		return sqlSession.selectOne("mybatis.artFairsMapper.getAtrFairsView", title);
 	}
 
-	public ArtFairsDTO getAtrFairsView_photo(String title) {
-		return sqlSession.selectOne("mybatis.artFairsMapper.getAtrFairsView_photo", title);
-	}
-	
 	public int insertArtFairs(ArtFairsDTO dto) {
 		return sqlSession.insert("mybatis.artFairsMapper.insertArtFairs", dto);
 	}
 
-	public int updateArtFairs(ArtFairsDTO dto, ArtFairsDTO dto_ori) {
-		Map<String, ArtFairsDTO> map = new HashMap<String, ArtFairsDTO>();
-		map.put("dto", dto);
-		map.put("dto_ori", dto_ori);
-		return sqlSession.update("mybatis.artFairsMapper.insertArtFairs", map);
+	public int updateArtFairs(ArtFairsDTO dto) {
+		return sqlSession.update("mybatis.artFairsMapper.updateArtFairs", dto);
+	}
+	
+	public int deleteArtFairs(String title) {
+		return sqlSession.delete("mybatis.artFairsMapper.deleteArtFairs", title);
 	}
 }

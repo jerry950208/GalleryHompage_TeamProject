@@ -42,19 +42,18 @@ public class ArtFairsServiceImpl implements ArtFairsService{
 		return dao.getAtrFairsView(title);
 	}
 
-	//페어진행 추가사진 가져오기
-	@Override
-	public ArtFairsDTO getAtrFairsView_photo(String title) {
-		return dao.getAtrFairsView_photo(title);
-	}
-
 	@Override
 	public int insertArtFairs(ArtFairsDTO dto) {
 		return dao.insertArtFairs(dto);
 	}
 
 	@Override
-	public int updateArtFairs(ArtFairsDTO dto, ArtFairsDTO dto_ori) {
-		return dao.updateArtFairs(dto, dto_ori);
+	public int updateArtFairs(ArtFairsDTO dto) {
+		return dao.updateArtFairs(dto);
+	}
+
+	@Override
+	public int deleteArtFairs(String title) {
+		return dao.deleteArtFairs(title);
 	}
 }

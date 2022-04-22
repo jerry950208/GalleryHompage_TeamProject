@@ -71,56 +71,60 @@ $(document).ready(function () {
 			<div id="view_tb1">
 				<div>
 					<div>
-						<span class="sp1">${dto1.title}</span>
+						<span class="sp1">${dto.title}</span>
 					</div>
 					<div>
-						<span class="sp2">${dto1.info_date}</span><br> 
-						<span class="sp2">${dto1.info}</span>
+						<span class="sp2">${dto.info_date}</span><br> 
+						<span class="sp2">${dto.info}</span>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<div id="view_section">
 			<div class="slide">
 				<button class="button" id="back"></button>
 				<ul>
 					<!-- cnt 값에 따라 사진 갯수 조정 -->
-					<li><img src="${dto1.detailimg_src}" width="550px" height="340px"></li>
+					<c:if test="${cnt == 0 }">
+						<li><img src="${dto.detailimg_src}" width="550px" height="340px"></li>
+					</c:if>
 					<c:if test="${cnt == 1 }">
-						<li><img src="${dto2.img_src1}" width="600px" height="340px"></li>
+						<li><img src="${dto.detailimg_src}" width="550px" height="340px"></li>
+						<li><img src="${dto.img_src1}" width="600px" height="340px"></li>
 					</c:if>
 					<c:if test="${cnt == 2 }">
-						<li><img src="${dto2.img_src1}" width="600px" height="340px"></li>
-						<li><img src="${dto2.img_src2}" width="600px" height="340px"></li>
+						<li><img src="${dto.detailimg_src}" width="550px" height="340px"></li>
+						<li><img src="${dto.img_src1}" width="600px" height="340px"></li>
+						<li><img src="${dto.img_src2}" width="600px" height="340px"></li>
 					</c:if>
 					<c:if test="${cnt == 3 }">
-						<li><img src="${dto2.img_src1}" width="600px" height="340px"></li>
-						<li><img src="${dto2.img_src2}" width="600px" height="340px"></li>
-						<li><img src="${dto2.img_src3}" width="600px" height="340px"></li>
+						<li><img src="${dto.detailimg_src}" width="550px" height="340px"></li>
+						<li><img src="${dto.img_src1}" width="600px" height="340px"></li>
+						<li><img src="${dto.img_src2}" width="600px" height="340px"></li>
+						<li><img src="${dto.img_src3}" width="600px" height="340px"></li>
 					</c:if>
 				</ul>
 				<button class="button" id="next"></button>
 				<!-- 슬라이드 이미지 위에 페이징처리 하기 -->
 				<div class="bar">
 					<input type="text" name="bar" class="bar_num" value="1/${cnt+1 }" readonly/>
-				</div>				
+				</div>	
 			</div>
 		</div>
 		<div id="view_aside">
 			<div id="view_tb2">
 				<div>
-					<span class="sp3">${dto1.place}</span>
+					<span class="sp3">${dto.place}</span>
 				</div>
 				<div>
-					<span class="sp4">${dto1.place_detail}</span>
+					<span class="sp4">${dto.place_detail}</span>
 				</div>
 				<div class="sp3">&nbsp;</div>
 				<div>
-					<span class="sp3">${dto1.artists }</span>
+					<span class="sp3">${dto.artists }</span>
 				</div>
 				<div>
-					<span class="sp4">${dto1.artist_name}</span>
+					<span class="sp4">${dto.artist_name}</span>
 				</div>
 			</div>
 		</div>
@@ -128,7 +132,10 @@ $(document).ready(function () {
 		<div id="view_footer">
 			<c:if test="${memid != null}">
 				<button type="button" id="button" onclick="location.href='artFairsModifyForm.do?title=${dto.title}'">
-					글 수정
+					글 수정 
+				</button>
+				<button type="button" id="button" onclick="location.href='artFairsDeleteForm.do?title=${dto.title}'">
+					글 삭제
 				</button>
 			</c:if>
 		</div>

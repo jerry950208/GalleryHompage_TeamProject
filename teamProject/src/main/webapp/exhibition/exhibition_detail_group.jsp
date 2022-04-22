@@ -119,6 +119,7 @@
                      <a href="${src}" data-lightbox="roadtrip"><img alt="${src}" src="${src}"></a>
                   </c:forEach>
                   </div>
+                  
                </div>
             </c:forEach>
          </div>
