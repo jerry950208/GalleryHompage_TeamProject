@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../css/galleries_Frame.css">
+<link rel="stylesheet" type="text/css" href="../css/login_button.css?v=0.1">
 <title>Insert title here</title>
 <script type="text/javascript">
 $(function () {
@@ -58,7 +59,7 @@ $(function () {
 		<!-- About Content -->
 		<div id="galleries_Content">
 			<!-- Content쪽 상단 Title -->
-			<div id="galleries_Content_Title">About</div>
+			<div id="galleries_Content_Title">Internship</div>
 			<!-- Content쪽 Title 하단 밑줄 -->
 			<div id="galleries_UnderLine"></div>
 			<!-- Content -->
@@ -69,9 +70,11 @@ $(function () {
 					${internship_Content }
 				</textarea>
 				
+				<div id="galleries_Btn">
 				<c:if test="<%=session.getAttribute(\"memid\") != null%>">
-					<input type="button" value="글 수정" onclick="location.href='../galleries/galleries_Internship_WriteForm.do'">
+					<input type="button" value="글 수정" id="button" onclick="location.href='../galleries/galleries_Internship_WriteForm.do'">
 				</c:if>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -36,5 +36,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="mybatis/artFairs-mapping.xml"/>
 		
 		<mapper resource="mybatis/login-mapping.xml"/>
+		
+		<mapper resource="mybatis/booking-mapping.xml"/>
 	</mappers>
 </configuration>

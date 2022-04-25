@@ -57,7 +57,7 @@ $(function () {
 		<!-- About Content -->
 		<div id="galleries_Content">
 			<!-- Content쪽 상단 Title -->
-			<div id="galleries_Content_Title">About</div>
+			<div id="galleries_Content_Title">Contact</div>
 			<!-- Content쪽 Title 하단 밑줄 -->
 			<div id="galleries_UnderLine"></div>	
 			

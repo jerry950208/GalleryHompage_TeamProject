@@ -16,6 +16,14 @@
 	</properties>
 	<dependencies>
 
+
+		<!-- 문자 인증관련 라이브러리 -->
+		<dependency>
+			<groupId>net.nurigo</groupId>
+			<artifactId>javaSDK</artifactId>
+			<version>2.2</version>
+		</dependency>
+
 		<!-- lombok사용을 위한 dependency -->
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>

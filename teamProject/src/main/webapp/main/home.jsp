@@ -6,8 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>HOME | GalleryBK</title>
-<link rel="stylesheet" type="text/css"
-	href="../css/home_Frame.css?v=0.4">
+<link rel="stylesheet" type="text/css" href="../css/home_Frame.css?v=0.4">
 <script type="text/javascript">
 	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
 	$(document).ready(function () {
@@ -53,7 +52,7 @@ to {
 				<p id="exhibition_Date">2022.03.10 - 04.07</p>
 				<p id="exhibition_Floor">BK itaewon B1-3F</p>
 				<br>
-				<br> <input type="button" value="예약하기" id="reservation_Btn">
+				<br> <input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='../booking/booking_1.do'">
 			</div>
 			<div id="reservation_float">
 				<p>
@@ -70,7 +69,7 @@ to {
 				<p id="exhibition_Date">2022.03.11 - 04.08</p>
 				<p id="exhibition_Floor">BK Hannam 1F</p>
 				<br>
-				<br> <input type="button" value="예약하기" id="reservation_Btn">
+				<br> <input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='../booking/booking_2.do'">
 			</div>
 			<div id="reservation_float">
 				<p>
@@ -87,7 +86,7 @@ to {
 				<p id="exhibition_Date">2022.03.17 - 04.14</p>
 				<p id="exhibition_Floor">BK Hannam 2-3F</p>
 				<br>
-				<br> <input type="button" value="예약하기" id="reservation_Btn">
+				<br> <input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='../booking/booking_3.do'">
 			</div>
 
 

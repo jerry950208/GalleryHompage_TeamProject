@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../css/galleries_Frame.css">
+<link rel="stylesheet" type="text/css" href="../css/login_button.css?v=0.1">
 <title>Insert title here</title>
 <script type="text/javascript">
 $(function () {
@@ -69,11 +70,12 @@ $(function () {
 					<pre>
 						${about_Content }
 					</pre>
-					
+					<div id="galleries_Btn">
 					<!-- 세션의 memid값이 null이 아니면 "글수정" 버튼이 보이게 되고 클릭시 글수정 화면으로 이동 -->
 					<c:if test="<%=session.getAttribute(\"memid\") != null%>">
-						<input type="button" value="글 수정" onclick="location.href='../galleries/galleries_About_WriteForm.do'">
+						<input type="button" value="글 수정"  id="button" onclick="location.href='../galleries/galleries_About_WriteForm.do'">
 					</c:if>
+					</div>
 				</div>
 				
 				<!-- Contact Form : 정보 입력시 contact_write를 통해 메일로 전송됨 -->
