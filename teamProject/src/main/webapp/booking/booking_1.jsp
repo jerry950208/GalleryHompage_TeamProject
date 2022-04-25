@@ -4,10 +4,16 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="../css/galleries_Frame.css">
-    <link rel="stylesheet" type="text/css" href="../css/booking_1.css?v=0.3">
+    <link rel="stylesheet" type="text/css" href="../css/booking_1.css?v=0.4">
     <script type="text/javascript">
         document.title = "Restoration of Relationships";
     </script>
+    <style type="text/css">
+    	#booking_1_header {
+    		width: 1100px;
+    		margin: auto;
+    	}
+    </style>
 </head>
 <body>
 <div id="booking_1_wrap">

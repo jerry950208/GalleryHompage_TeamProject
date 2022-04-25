@@ -69,7 +69,7 @@ to {
 				<p id="exhibition_Date">2022.03.11 - 04.08</p>
 				<p id="exhibition_Floor">BK Hannam 1F</p>
 				<br>
-				<br> <input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='../booking/booking_2.do'">
+				<br> <input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='../booking/booking_1.do'">
 			</div>
 			<div id="reservation_float">
 				<p>
@@ -86,7 +86,7 @@ to {
 				<p id="exhibition_Date">2022.03.17 - 04.14</p>
 				<p id="exhibition_Floor">BK Hannam 2-3F</p>
 				<br>
-				<br> <input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='../booking/booking_3.do'">
+				<br> <input type="button" value="예약하기" id="reservation_Btn" onclick="location.href='../booking/booking_1.do'">
 			</div>
 
 
@@ -127,32 +127,7 @@ to {
 		</div>
 		<!-- 지난 전시회 나열 종료 -->
 		
-		<!-- Subscribe to Our Newsletter 시작 -->
-		<div id="subscribe_Frame">
-			<form id="subscribe_Move_Center" action="#">
-				<table>
-					<tr>
-						<td id="subscribe_Title">Subscribe to Our Newsletter</td>
-					</tr>
-					<tr>
-						<td>
-							<div id="subscribe_Underline"></div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="email" name="email" placeholder="Enter your email here*" id="subscribe_Email" required="required">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="submit" value="SEND>" onclick="#" id="subscribe_Btn">
-						</td>
-					</tr>
-				</table>
-			</form>
-		</div>
-		<!-- Subscribe to Our Newsletter 종료 -->
+		
 	</div>
 </body>
 </html>

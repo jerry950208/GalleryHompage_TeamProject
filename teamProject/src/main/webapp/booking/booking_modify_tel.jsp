@@ -160,7 +160,7 @@
                             alert("인증번호 전송 완료");
                             code2 = data;
 
-                            alert(data); /////////////////////////////Test
+                            //alert(data); /////////////////////////////Test
                         },
                         error: function (xhr, textStatus, errorThrown) {
                             alert("휴대폰 번호가 올바르지 않습니다")

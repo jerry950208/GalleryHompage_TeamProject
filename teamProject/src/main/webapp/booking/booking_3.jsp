@@ -62,7 +62,7 @@
                     price: '${price}', //실제 결제되는 가격
 
                     // 관리자로그인 -> 결제설치 -> 인증키 및 보안 -> WEB Application ID
-                    application_id: "62626731270180001ef694f4",
+                    application_id: "62663dd52701800021f696e7",
 
                     name: 'Restoration of Relationships',  //결제창에서 보여질 이름
                     pg: 'toss',

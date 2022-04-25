@@ -377,7 +377,7 @@
                                     $(".input_certifyKey_info").css("color", "green");
 
                                     code2 = data;
-                                    alert(data); /////////////////////////////Test
+                                    //alert(data); /////////////////////////////Test
                                 }
                             },
                         });
@@ -408,6 +408,12 @@
 
         });
     </script>
+    <style type="text/css">
+    	#booking_2_header {
+    		width: 1100px;
+    		margin: auto;
+    	}
+    </style>
 </head>
 <body>
 <div id="booking_2_wrap">
@@ -418,9 +424,7 @@
     <div id="booking_2_section">
         <div id="booking_2_section_info">
             <div id="booking_2_section_info_img">
-                <img src="https://static.wixstatic.com/media/520ee6_f976fc2a823947148ecc1a5b552ff064~mv2.jpg"
-                     width="400"
-                     height="500">
+                <img src="https://static.wixstatic.com/media/520ee6_f976fc2a823947148ecc1a5b552ff064~mv2.jpg" width="400" height="500">
             </div>
         </div>
 
@@ -506,6 +510,18 @@
 
                     </div>
                     <div>
+                    	<table style="width: 400px;">
+                    		<tr>
+                    			<td>예매자 정보</td>
+                    			<td align="right" style="width: 25%;">
+                    				<img src="image/check_r.png" style="width: 30px; height: 30px; float: left;">
+                                	<span">필수입력</span>
+                                </td>
+                    		</tr>
+                    	</table>
+                        
+                        
+                        <!-- 
                         <div>예매자 정보</div>
                         <div>
                             <div>
@@ -513,6 +529,7 @@
                                 <div>필수입력</div>
                             </div>
                         </div>
+                         -->
                     </div>
                     <div>
                         <div>예매자</div>
@@ -520,8 +537,8 @@
                     </div>
                     <div>
                         <div>연락처</div>
-                        <div><input type="tel" name="tel" class="tel"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                        <div>
+                        	<input type="tel" name="tel" class="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                         </div>
                     </div>
                     <div>
@@ -540,19 +557,19 @@
                 </div>
 
                 <div class="certify_tel">
+                    
                     <div>
-                        <div>
-                            <img src="image/check_g.png"> 휴대폰 인증
+                        <div style="width: 35%;">
+                            <img src="image/check_g.png">휴대폰 인증
                         </div>
-                        <div>
-                            <input type="button" value="인증번호 전송" class="send_certifyKey">
+                        <div style="width: 50%;">
+                            <input type="button" value="인증번호 전송" class="send_certifyKey"  style="margin-left: 5px;">
                         </div>
                     </div>
                     <div>
                         <div>
                             <input type="text" class="input_certifyKey"
-                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                   disabled>
+                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" disabled>
                         </div>
                         <div class="input_certifyKey_info">
                         </div>
