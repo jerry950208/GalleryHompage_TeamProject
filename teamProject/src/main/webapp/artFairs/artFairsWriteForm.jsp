@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../css/artFairs.css">
+<link rel="stylesheet" type="text/css" href="../css/artFairs.css?v=0.2">
 <link rel="stylesheet" type="text/css" href="../css/login_button.css">
 <script type="text/javascript">
 	/* 해당페이지에 들어오게 되면 메뉴 클릭이 비활성화되게 설정 */
